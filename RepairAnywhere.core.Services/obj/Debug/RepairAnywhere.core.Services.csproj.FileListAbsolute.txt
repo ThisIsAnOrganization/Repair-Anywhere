@@ -1,0 +1,1 @@
+c:\users\sakib's nitro\documents\visual studio 2012\Projects\MvcApplication1\RepairAnywhere.core.Services\obj\Debug\RepairAnywhere.core.Services.csprojResolveAssemblyReference.cache
