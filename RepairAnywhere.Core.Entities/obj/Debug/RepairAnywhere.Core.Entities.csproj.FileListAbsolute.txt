@@ -1,0 +1,10 @@
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.dll.config
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.pdb
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.xml
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.pdb

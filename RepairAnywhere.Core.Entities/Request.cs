@@ -14,9 +14,9 @@ namespace RepairAnywhere.Core.Entities
         public string Category { get; set; }
         public string RequestDescription { get; set; }
         public string Cost { get; set; }
-        public string CustomerID { get; set; }
-        public string RepairmanID { get; set; }
+        public int CustomerID { get; set; }
+        public int RepairmanID { get; set; }
         public string Status { get; set; }
-        public string RequestDate { get; set; }
+        public DateTime RequestDate { get; set; }
     }
 }

@@ -1,0 +1,7 @@
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.pdb
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.csprojResolveAssemblyReference.cache
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
