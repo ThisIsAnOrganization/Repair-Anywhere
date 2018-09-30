@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace RepairAnywhere.Core.Entities
 {
-    class Review
+    public class Review
     {
         [Key]
+        public int ReviewID { get; set; }
         public int CustomerID { get; set; }
         public string CustomerName { get; set; }
         public int RepairmanID { get; set; }

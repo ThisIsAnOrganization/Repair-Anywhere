@@ -14,9 +14,11 @@ namespace RepairAnywhere.Infrastructure
 
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Login> Logins { get; set; }
         public DbSet<Repairman> Repairmans { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<Request> Requests { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
     }
 }

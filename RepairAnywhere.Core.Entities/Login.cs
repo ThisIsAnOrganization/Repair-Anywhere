@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace RepairAnywhere.Core.Entities
 {
-    class Login
+    public class Login
     {
         [Key]
         public string Username { get; set; }
         public string Password { get; set; }
         public string UserType { get; set; }
+        public int UserID { get; set; }
     }
 }
