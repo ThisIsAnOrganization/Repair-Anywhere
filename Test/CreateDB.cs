@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    public class CreateDB
+    public class CreateDb
     {
         public void InsertInTable()
         {
@@ -17,7 +17,7 @@ namespace Test
 
             //Insert Admin
 
-            AdminService AS= new AdminService(radb);
+            AdminService AS = new AdminService(radb);
 
             Admin a1 = new Admin();
             a1.Name = "Admin";
@@ -25,7 +25,7 @@ namespace Test
             a1.Email = "admin@ra.com";
             a1.Password = "1234";
 
-            Console.WriteLine("\n inseted "+AS.Insert(a1));
+            Console.WriteLine("\n inseted " + AS.Insert(a1));
         }
     }
 }

@@ -23,9 +23,9 @@ namespace Test
 
             foreach (var item in admins)
             {
-                Console.WriteLine("\nDeleted "+AS.Delete(item.AdminID));
+                Console.WriteLine("\nDeleted " + AS.Delete(item.AdminID));
             }
-            
+
         }
     }
 }

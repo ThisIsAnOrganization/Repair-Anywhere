@@ -10,7 +10,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            CreateDB dbi = new CreateDB();
+            CreateDb dbi = new CreateDb();
             dbi.InsertInTable();
 
             RetrieveFromDb rdb = new RetrieveFromDb();
