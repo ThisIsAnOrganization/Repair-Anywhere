@@ -70,10 +70,12 @@
 			<div class="modal-content">
 				
 				<div class="modal-body" >
-					<form class="form-signin" action="../Customer/index.html">
+					
 		              <div class="form-label-group">
-		              	<label for="inputEmail">Email address</label>
-		                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		              	<label for="inputEmail">Username</label>
+		                <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+                          <br />
+                          <span id="DvalidationErr" style="color:red">
 		                
 		              </div>
 
@@ -83,7 +85,9 @@
 		                
 		              </div>
 		              <br/>
-		              <button class="btn btn-primary btn-block">Login</button><br/>
+                    <span id="validationErr" style="color:red"/>
+                        <br />
+		              <div id="loginButton"><button  class="btn btn-primary btn-block">Login</button></div><br/>
 					  <div class="text-center">
 						  <a class="d-block small mt-3" href="forgetpass.html">Forgot Password</a>
 
@@ -95,7 +99,6 @@
 		              <div class="text-center">
 		                <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
 		              </div>-->
-		            </form>
 					
 					
 				</div>
@@ -105,6 +108,7 @@
 	</div>
     </header>
 
+      
     <!-- About Section -->
     <section id="about" class="about-section text-center">
       <div  class="container">
@@ -228,4 +232,60 @@
 
   </body>
 
+    <script>
+
+        $("#loginButton").click(function () {
+            alert("asd");
+            var valid = true;
+            if (valid) {
+
+
+                var email = $("#inputEmail").val();
+                var password = $("#inputPassword").val();
+
+                $.ajax({
+
+                    method: "POST",
+                    //contentType: "application/json; charset=utf-8",
+                    data: { 'email': email, 'password': password },
+                    url: "@Url.Action("login", "Common")",
+                    success: function (data) {
+                        //alert(data);
+                        if (data == "Invalid") {
+                            //$("#validationErr").text("This email is not exists");
+                            alert("This email is not exists");
+                        }
+                        else if (data == "Block") {
+                            //$("#validationErr").text("Your Account is blocked!!!");
+                            //alert("asd");
+                        }
+                        else if (data == "Invalid Password") {
+                            //$("#validationErr").text("Invalid Password!!!");
+                            alert("Invalid Password!!!");
+
+                        }
+                        else {
+                            if (data == "0") {
+                                window.location = '@Url.Action("index", "Common"@*, new { id = @Model.DetailProduct.ProductId }*@)'
+                              }
+                              if (data == "1") {
+                                  window.location = '@Url.Action("dashboard", "Customer")'
+                        }
+
+                    }
+                      },
+                    error: function () { alert("error") }
+                });
+
+}
+
+
+        });
+
+
+</script>	
+
+
 </html>
+
+

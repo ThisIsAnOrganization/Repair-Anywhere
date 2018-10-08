@@ -1,36 +1,18 @@
-E:\RepairAnywhere\Test\bin\Debug\Test.exe.config
-E:\RepairAnywhere\Test\bin\Debug\Test.exe
-E:\RepairAnywhere\Test\bin\Debug\Test.pdb
-E:\RepairAnywhere\Test\bin\Debug\EntityFramework.dll
-E:\RepairAnywhere\Test\bin\Debug\EntityFramework.SqlServer.dll
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.dll
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.dll
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.dll
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.pdb
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.pdb
-E:\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.pdb
-E:\RepairAnywhere\Test\bin\Debug\EntityFramework.xml
-E:\RepairAnywhere\Test\bin\Debug\EntityFramework.SqlServer.xml
-E:\RepairAnywhere\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-E:\RepairAnywhere\Test\obj\Debug\Test.exe
-E:\RepairAnywhere\Test\obj\Debug\Test.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\Test.exe.config
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\obj\Debug\Test.exe
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\obj\Debug\Test.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\Test.exe
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\Test.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.dll
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.dll
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.dll
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.dll
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.pdb
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.xml
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Ezy\Documents\GitHub\Repair-Anywhere\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\Test.exe.config
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\Test.exe
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\Test.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\EntityFramework.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Core.Service.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\EntityFramework.xml
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\obj\Debug\Test.exe
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\Test\obj\Debug\Test.pdb

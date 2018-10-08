@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{46017597-4459-4AAA-A5E5-79B32DB2A431}</ProjectGuid>
+    <ProjectGuid>{D110BF98-BD48-4B7A-B1F5-6281879B22BB}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,64 +40,55 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Configuration">
-      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -113,21 +105,63 @@
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mvc3">
-      <HintPath>..\packages\Unity.Mvc3.1.2\lib\net40\Unity.Mvc3.dll</HintPath>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc4, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc4.1.6.0.0\lib\net45\Unity.Mvc4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerViewModel\ChangePassowrdViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\CompletedRepairsViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\CustomerModel.cs" />
+    <Compile Include="Models\CustomerViewModel\DashboardViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\EditProfileViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\MyServicesViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\RequestServiceViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\TripsDeailsViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\ViewProfileViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel\ViewServiceProviderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +169,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Styles\Common\css\grayscale.css" />
     <Content Include="Styles\Common\css\grayscale.min.css" />
     <Content Include="Styles\Common\css\sb-admin.css" />
@@ -1510,7 +1549,67 @@
     <Content Include="Styles\Common\vendor\jquery\jquery.min.js" />
     <Content Include="Styles\Common\vendor\jquery\jquery.slim.js" />
     <Content Include="Styles\Common\vendor\jquery\jquery.slim.min.js" />
-    <Content Include="Unity.Mvc3.README.txt" />
+    <Content Include="Styles\Customer\css\sb-admin.css" />
+    <Content Include="Styles\Customer\css\sb-admin.min.css" />
+    <Content Include="Styles\Customer\gulpfile.js" />
+    <Content Include="Styles\Customer\images\bg-masthead.jpg" />
+    <Content Include="Styles\Customer\images\bg-signup.jpg" />
+    <Content Include="Styles\Customer\images\demo-image-01.jpg" />
+    <Content Include="Styles\Customer\images\demo-image-02.jpg" />
+    <Content Include="Styles\Customer\images\ipad.png" />
+    <Content Include="Styles\Customer\images\logo.png" />
+    <Content Include="Styles\Customer\images\ok.png" />
+    <Content Include="Styles\Customer\images\p1.jpg" />
+    <Content Include="Styles\Customer\images\p2.jpg" />
+    <Content Include="Styles\Customer\images\p3.jpg" />
+    <Content Include="Styles\Customer\images\p4.jpg" />
+    <Content Include="Styles\Customer\images\p5.JPG" />
+    <Content Include="Styles\Customer\images\user_pic.jpg" />
+    <Content Include="Styles\Customer\js\sb-admin-charts.js" />
+    <Content Include="Styles\Customer\js\sb-admin-charts.min.js" />
+    <Content Include="Styles\Customer\js\sb-admin-datatables.js" />
+    <Content Include="Styles\Customer\js\sb-admin-datatables.min.js" />
+    <Content Include="Styles\Customer\js\sb-admin.js" />
+    <Content Include="Styles\Customer\js\sb-admin.min.js" />
+    <Content Include="Styles\Customer\pages\blank.html" />
+    <Content Include="Styles\Customer\pages\changePassword.html" />
+    <Content Include="Styles\Customer\pages\completedrepairs.html" />
+    <Content Include="Styles\Customer\pages\dashboard.html" />
+    <Content Include="Styles\Customer\pages\editProfile.html" />
+    <Content Include="Styles\Customer\pages\index.html" />
+    <Content Include="Styles\Customer\pages\myServices.html" />
+    <Content Include="Styles\Customer\pages\RequestService.html" />
+    <Content Include="Styles\Customer\pages\tripsdetails.html" />
+    <Content Include="Styles\Customer\pages\viewProfile.html" />
+    <Content Include="Styles\Customer\pages\viewserviceprovider.html" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Styles\Customer\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Styles\Customer\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Styles\Customer\vendor\chart.js\Chart.js" />
+    <Content Include="Styles\Customer\vendor\chart.js\Chart.min.js" />
+    <Content Include="Styles\Customer\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Styles\Customer\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Styles\Customer\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Styles\Customer\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Styles\Customer\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Styles\Customer\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\Customer\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Styles\Customer\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Styles\Customer\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Styles\Customer\vendor\jquery\jquery.js" />
+    <Content Include="Styles\Customer\vendor\jquery\jquery.min.js" />
+    <Content Include="Styles\Customer\vendor\jquery\jquery.slim.js" />
+    <Content Include="Styles\Customer\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Unity.Mvc4.README.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1519,35 +1618,119 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Styles\Customer\.gitignore" />
+    <Content Include="Styles\Customer\.jsbeautifyrc" />
+    <Content Include="Styles\Customer\.travis.yml" />
+    <Content Include="Styles\Customer\LICENSE" />
+    <Content Include="Styles\Customer\package-lock.json" />
+    <Content Include="Styles\Customer\package.json" />
+    <Content Include="Styles\Customer\pug\blank.pug" />
+    <Content Include="Styles\Customer\pug\cards.pug" />
+    <Content Include="Styles\Customer\pug\charts.pug" />
+    <Content Include="Styles\Customer\pug\forgot-password.pug" />
+    <Content Include="Styles\Customer\pug\includes\css\core.pug" />
+    <Content Include="Styles\Customer\pug\includes\css\custom.pug" />
+    <Content Include="Styles\Customer\pug\includes\footer.pug" />
+    <Content Include="Styles\Customer\pug\includes\js\core.pug" />
+    <Content Include="Styles\Customer\pug\includes\js\custom.pug" />
+    <Content Include="Styles\Customer\pug\includes\modals\logout.pug" />
+    <Content Include="Styles\Customer\pug\includes\navbar.pug" />
+    <Content Include="Styles\Customer\pug\includes\scroll-to-top.pug" />
+    <Content Include="Styles\Customer\pug\index.pug" />
+    <Content Include="Styles\Customer\pug\login.pug" />
+    <Content Include="Styles\Customer\pug\navbar.pug" />
+    <Content Include="Styles\Customer\pug\register.pug" />
+    <Content Include="Styles\Customer\pug\tables.pug" />
+    <Content Include="Styles\Customer\README.md" />
+    <Content Include="Styles\Customer\scss\navbar\_navbar_colors.scss" />
+    <Content Include="Styles\Customer\scss\navbar\_navbar_fixed.scss" />
+    <Content Include="Styles\Customer\scss\navbar\_navbar_global.scss" />
+    <Content Include="Styles\Customer\scss\navbar\_navbar_static.scss" />
+    <Content Include="Styles\Customer\scss\navbar\_navbar_toggle.scss" />
+    <Content Include="Styles\Customer\scss\sb-admin.scss" />
+    <Content Include="Styles\Customer\scss\_cards.scss" />
+    <Content Include="Styles\Customer\scss\_footer.scss" />
+    <Content Include="Styles\Customer\scss\_global.scss" />
+    <Content Include="Styles\Customer\scss\_login.scss" />
+    <Content Include="Styles\Customer\scss\_mixins.scss" />
+    <Content Include="Styles\Customer\scss\_utilities.scss" />
+    <Content Include="Styles\Customer\scss\_variables.scss" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Styles\Customer\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Styles\Customer\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Styles\Customer\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Styles\Customer\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\Customer\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\Customer\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\Customer\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styles\Customer\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\animated.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\core.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\icons.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\larger.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\list.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\path.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\less\variables.less" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Styles\Customer\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Styles\Customer\vendor\jquery\jquery.min.map" />
+    <Content Include="Styles\Customer\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Customer\changePassword.cshtml" />
+    <Content Include="Views\Customer\completedrepairs.cshtml" />
+    <Content Include="Views\Customer\dashboard.cshtml" />
+    <Content Include="Views\Customer\editProfile.cshtml" />
+    <Content Include="Views\Customer\myServices.cshtml" />
+    <Content Include="Views\Customer\RequestService.cshtml" />
+    <Content Include="Views\Customer\tripsdetails.cshtml" />
+    <Content Include="Views\Customer\viewProfile.cshtml" />
+    <Content Include="Views\Customer\viewserviceprovider.cshtml" />
+    <Content Include="Views\Customer\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config.uninstall.xdt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.config.install.xdt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\RepairAnywhere.Core.Entities\RepairAnywhere.Core.Entities.csproj">
-      <Project>{a8d239c3-0d8d-4544-970a-0a8f091c03b8}</Project>
+      <Project>{f65473a9-bb69-4cf3-8c0a-f3e85e26b9b4}</Project>
       <Name>RepairAnywhere.Core.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Core.Service.Interfaces\RepairAnywhere.Core.Service.Interfaces.csproj">
-      <Project>{ff9b5283-7c0f-4338-a55b-29f259811825}</Project>
+      <Project>{40ddef63-ebe0-4f1d-b9e9-224209cad23e}</Project>
       <Name>RepairAnywhere.Core.Service.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Core.Service\RepairAnywhere.Core.Service.csproj">
-      <Project>{3b618f8a-9bb7-4d8e-b8b1-5cdf220603d8}</Project>
+      <Project>{360eca98-8c1b-4a23-8e33-89d473b0563e}</Project>
       <Name>RepairAnywhere.Core.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Infrastructure\RepairAnywhere.Infrastructure.csproj">
-      <Project>{6231c67b-ffe1-4107-b4eb-e8638cdb9494}</Project>
+      <Project>{958f6b3d-510c-4c9f-855e-dd943f5facfc}</Project>
       <Name>RepairAnywhere.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
@@ -1695,6 +1878,9 @@
     <Content Include="Styles\Common\vendor\jquery\jquery.min.map" />
     <Content Include="Styles\Common\vendor\jquery\jquery.slim.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CustomerLayout.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1713,7 +1899,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:40822/</IISUrl>
+          <IISUrl>http://localhost:31902/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

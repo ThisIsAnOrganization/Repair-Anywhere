@@ -25,7 +25,16 @@ namespace Test
             a1.Email = "admin@ra.com";
             a1.Password = "1234";
 
-            Console.WriteLine("\n inseted " + AS.Insert(a1));
+            Login l1 = new Login();
+            l1.Username = "admin";
+            l1.Password = "1234";
+            l1.UserID = 3;
+            l1.UserType = "admin";
+
+            LoginService LS = new LoginService(radb);
+
+
+            Console.WriteLine("\n inseted " + AS.Insert(a1) + LS.Insert(l1));
         }
     }
 }

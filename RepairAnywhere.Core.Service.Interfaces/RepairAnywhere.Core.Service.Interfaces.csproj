@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF9B5283-7C0F-4338-A55B-29F259811825}</ProjectGuid>
+    <ProjectGuid>{40DDEF63-EBE0-4F1D-B9E9-224209CAD23E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RepairAnywhere.Core.Service.Interfaces</RootNamespace>
@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RepairAnywhere.Core.Entities\RepairAnywhere.Core.Entities.csproj">
-      <Project>{a8d239c3-0d8d-4544-970a-0a8f091c03b8}</Project>
+      <Project>{f65473a9-bb69-4cf3-8c0a-f3e85e26b9b4}</Project>
       <Name>RepairAnywhere.Core.Entities</Name>
     </ProjectReference>
   </ItemGroup>

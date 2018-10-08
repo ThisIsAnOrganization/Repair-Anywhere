@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B618F8A-9BB7-4D8E-B8B1-5CDF220603D8}</ProjectGuid>
+    <ProjectGuid>{360ECA98-8C1B-4A23-8E33-89D473B0563E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RepairAnywhere.Core.Service</RootNamespace>
@@ -30,16 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,18 +58,18 @@
     <Compile Include="ReviewService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\RepairAnywhere.Core.Entities\RepairAnywhere.Core.Entities.csproj">
-      <Project>{a8d239c3-0d8d-4544-970a-0a8f091c03b8}</Project>
+      <Project>{f65473a9-bb69-4cf3-8c0a-f3e85e26b9b4}</Project>
       <Name>RepairAnywhere.Core.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Core.Service.Interfaces\RepairAnywhere.Core.Service.Interfaces.csproj">
-      <Project>{ff9b5283-7c0f-4338-a55b-29f259811825}</Project>
+      <Project>{40ddef63-ebe0-4f1d-b9e9-224209cad23e}</Project>
       <Name>RepairAnywhere.Core.Service.Interfaces</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6231C67B-FFE1-4107-B4EB-E8638CDB9494}</ProjectGuid>
+    <ProjectGuid>{958F6B3D-510C-4C9F-855E-DD943F5FACFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RepairAnywhere.Infrastructure</RootNamespace>
@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -55,16 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RepairAnywhere.Core.Entities\RepairAnywhere.Core.Entities.csproj">
-      <Project>{a8d239c3-0d8d-4544-970a-0a8f091c03b8}</Project>
+      <Project>{f65473a9-bb69-4cf3-8c0a-f3e85e26b9b4}</Project>
       <Name>RepairAnywhere.Core.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RepairAnywhere.Core.Service.Interfaces\RepairAnywhere.Core.Service.Interfaces.csproj">
-      <Project>{ff9b5283-7c0f-4338-a55b-29f259811825}</Project>
-      <Name>RepairAnywhere.Core.Service.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RepairAnywhere.Core.Service\RepairAnywhere.Core.Service.csproj">
-      <Project>{3b618f8a-9bb7-4d8e-b8b1-5cdf220603d8}</Project>
-      <Name>RepairAnywhere.Core.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

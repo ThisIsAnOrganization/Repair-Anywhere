@@ -10,7 +10,7 @@ namespace RepairAnywhere.Core.Service.Interfaces
     public interface ILoginService
     {
         IEnumerable<Login> GetAll();
-        Login GetById(string Username);
+        Login GetByUsername(string Username);
         bool Insert(Login login);
         bool Update(Login login);
         bool Delete(string Username);

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5190B907-3C61-4CF3-B305-B99D244C7ACA}</ProjectGuid>
+    <ProjectGuid>{565077AB-4D08-44DC-8C3C-6B2732DE8D19}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Test</RootNamespace>
@@ -32,11 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -60,19 +62,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RepairAnywhere.Core.Entities\RepairAnywhere.Core.Entities.csproj">
-      <Project>{a8d239c3-0d8d-4544-970a-0a8f091c03b8}</Project>
+      <Project>{f65473a9-bb69-4cf3-8c0a-f3e85e26b9b4}</Project>
       <Name>RepairAnywhere.Core.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Core.Service.Interfaces\RepairAnywhere.Core.Service.Interfaces.csproj">
-      <Project>{ff9b5283-7c0f-4338-a55b-29f259811825}</Project>
+      <Project>{40ddef63-ebe0-4f1d-b9e9-224209cad23e}</Project>
       <Name>RepairAnywhere.Core.Service.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Core.Service\RepairAnywhere.Core.Service.csproj">
-      <Project>{3b618f8a-9bb7-4d8e-b8b1-5cdf220603d8}</Project>
+      <Project>{360eca98-8c1b-4a23-8e33-89d473b0563e}</Project>
       <Name>RepairAnywhere.Core.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\RepairAnywhere.Infrastructure\RepairAnywhere.Infrastructure.csproj">
-      <Project>{6231c67b-ffe1-4107-b4eb-e8638cdb9494}</Project>
+      <Project>{958f6b3d-510c-4c9f-855e-dd943f5facfc}</Project>
       <Name>RepairAnywhere.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>

@@ -17,7 +17,7 @@ namespace Test
             rdb.Retieve();
 
             DeleteDb ddb = new DeleteDb();
-            ddb.DeleteFromTable();
+            //ddb.DeleteFromTable();
         }
     }
 }

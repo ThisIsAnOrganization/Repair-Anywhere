@@ -24,9 +24,9 @@ namespace RepairAnywhere.Core.Service
         }
 
 
-        public Login GetById(string Username)
+        public Login GetByUsername(string Username)
         {
-            return _context.Set<Login>().Where(i => i.Username == Username).SingleOrDefault();
+            return _context.Set<Login>().Where(i => Equals(i.Username, Username)).SingleOrDefault();
         }
 
         public bool Insert(Login login)

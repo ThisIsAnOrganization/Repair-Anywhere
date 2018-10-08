@@ -1,28 +1,14 @@
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll.config
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.pdb
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.dll
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.dll
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.dll
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.pdb
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.xml
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.xml
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.csprojResolveAssemblyReference.cache
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.dll
-c:\users\efti\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.pdb
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll.config
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.pdb
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.dll
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.dll
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.dll
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.pdb
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.xml
-E:\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.xml
-E:\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.csprojResolveAssemblyReference.cache
-E:\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.dll
-E:\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll.config
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.xml
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.csprojResolveAssemblyReference.cache
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.dll
+c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.pdb
