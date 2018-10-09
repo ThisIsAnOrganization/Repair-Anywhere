@@ -68,5 +68,21 @@ namespace RepairAnywhere.Core.Service
             }
             return true;
         }
+
+
+        public IEnumerable<Request> GetPendingByCustomer(int CustomerID)
+        {
+            return _context.Set<Request>().Where(i => i.CustomerID == CustomerID && i.Status=="Pending").ToList();
+        }
+
+        public IEnumerable<Request> GetActiveByCustomer(int CustomerID)
+        {
+            return _context.Set<Request>().Where(i => i.CustomerID == CustomerID && i.Status == "Active").ToList();
+        }
+
+        public IEnumerable<Request> GetCompletedByCustomer(int CustomerID)
+        {
+            return _context.Set<Request>().Where(i => i.CustomerID == CustomerID && i.Status == "Completed").ToList();
+        }
     }
 }

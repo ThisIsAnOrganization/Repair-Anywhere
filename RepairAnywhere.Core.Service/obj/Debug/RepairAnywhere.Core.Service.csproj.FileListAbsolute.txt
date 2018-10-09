@@ -12,3 +12,17 @@ c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.csprojResolveAssemblyReference.cache
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.dll
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll.config
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.xml
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service\obj\Debug\RepairAnywhere.Core.Service.pdb

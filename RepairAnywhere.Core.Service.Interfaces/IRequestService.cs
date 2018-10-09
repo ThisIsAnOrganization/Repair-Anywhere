@@ -14,5 +14,11 @@ namespace RepairAnywhere.Core.Service.Interfaces
         bool Insert(Request request);
         bool Update(Request request);
         bool Delete(int RequestId);
+
+        IEnumerable<Request> GetPendingByCustomer(int CustomerID);
+        IEnumerable<Request> GetActiveByCustomer(int CustomerID);
+        IEnumerable<Request> GetCompletedByCustomer(int CustomerID);
+
+        
     }
 }

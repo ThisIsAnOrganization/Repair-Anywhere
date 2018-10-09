@@ -13,27 +13,50 @@ namespace RepairAnywhere.Controllers
 {
     public class CommonController : Controller
     {
-        public ILoginService _LoginService;
+        public IAdminService _AdminService;
         public ICustomerService _CustomerService;
+        public ILoginService _LoginService;
+        public IRepairmanService _RepairmanService;
+        public IReportService _ReportService;
+        public IRequestService _RequestService;
+        public IReviewService _ReviewService;
+
+        public CommonController()
+        {
+            RepairAnywhereDbContext radb = new RepairAnywhereDbContext();
+
+            _AdminService = new AdminService(radb);
+            _CustomerService = new CustomerService(radb);
+            _LoginService = new LoginService(radb);
+            _RepairmanService = new RepairmanService(radb);
+            _ReportService = new ReportService(radb);
+            _RequestService = new RequestService(radb);
+            _ReviewService = new ReviewService(radb);
+
+        }
+
+        
 
 
         public ActionResult index()
         {
+            if (Session["userId"] != null)
+                return RedirectToAction("dashboard", "Customer");
+            
             return View();
         }
 
         public ActionResult login()
         {
+            if (Session["userId"] != null)
+                return RedirectToAction("dashboard", "Customer");
+
             return View();
         }
 
         [HttpPost]
         public string login(string email, string password)
         {
-
-            RepairAnywhereDbContext radb = new RepairAnywhereDbContext();
-            _LoginService = new LoginService(radb);
-
             Login l = _LoginService.GetByUsername(email);
             if (l == null)
             {
@@ -63,23 +86,25 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult forgetpass()
         {
+            if (Session["userId"] != null)
+                return RedirectToAction("dashboard", "Customer");
+
             return View();
         }
 
         public ActionResult register()
         {
+            if (Session["userId"] != null)
+                return RedirectToAction("dashboard", "Customer");
+
             return View();
         }
 
         [HttpPost]
         public ActionResult register(string Name, string Email, string PhoneNumber, string Password1, string Password)
         {
-            if(Equals(Password,Password1))
+            if (Equals(Password, Password1))
             {
-                RepairAnywhereDbContext radb = new RepairAnywhereDbContext();
-                _LoginService = new LoginService(radb);
-                _CustomerService = new CustomerService(radb);
-
                 Customer c = new Customer();
                 c.Name = Name;
                 c.Email = Email;

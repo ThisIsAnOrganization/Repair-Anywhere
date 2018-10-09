@@ -5,3 +5,10 @@ c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.csprojResolveAssemblyReference.cache
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.dll
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.pdb

@@ -76,7 +76,10 @@
         </div>
       </div>
 	  <!--active-->
-				<div class="card ">
+        @{ var count = 0; }
+        @foreach (var item in @Model.ActiveRequests)
+        {
+            <div class="card ">
                         <div class="card-header bg-primary text-white">
                             <b>Active Service</b>
                         </div>
@@ -84,19 +87,48 @@
 						<div class="card-block">
 						<div style="padding:10px">
                                     <p>
-                                        <img class="rounded-circle" width="10%" src="../images/user_pic.jpg"/> &nbsp &nbsp &nbsp <strong style="font-size:20px"> Service Provider</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
-                                        <span class="pull-right text-muted" style="font-size:16px"><br/>Bashundhara<br/>Started At: 2018-08-28 23:59:59</span>
+                                        <img class="rounded-circle" width="10%" src="../images/user_pic.jpg"/> &nbsp &nbsp &nbsp <strong style="font-size:20px"> @Model.ActiveRepairman[count].Name</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
+                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@Model.customer.Address<br/>Requested At: @item.RequestDate</span>
                                     </p>
-									<i>Phone no: 019xxxxxxxx</i>
+									<i>Phone no: @Model.ActiveRepairman[count].PhoneNumber</i>
 									<hr/>
 									<b style="font-size:16px">
-									Payment Status: Pending<br/>
-									Service Charge: 1200 tk</b>
+									Status: @item.Status<br/>
+									Service Charge: @item.Cost</b>
 									<button class="pull-right btn btn-primary" onclick="window.location='tripsdetails.html'">View</button>
                                 </div>
 						</div>
                         
-                    </div>
+                    </div><br />
+            count++;
+        
+        }
+
+        @foreach (var item in @Model.PendingRequests)
+        {
+            <div class="card ">
+                        <div class="card-header bg-warning text-white">
+                            <b>Pending Service</b>
+                        </div>
+                        
+						<div class="card-block">
+						<div style="padding:10px">
+                                    <p>
+                                         &nbsp &nbsp &nbsp <strong style="font-size:20px"> @item.RequestDescription</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
+                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@Model.customer.Address<br/>Requested At: @item.RequestDate</span>
+                                    </p>
+									@*<i>Phone no: @Model.ActiveRepairman[count].PhoneNumber</i>*@
+									<hr/>
+									<b style="font-size:16px">
+									Status: @item.Status<br/>
+									Service Charge:Not yet set</b>
+									<button class="pull-right btn btn-primary" onclick="window.location='tripsdetails.html'">View</button>
+                                </div>
+						</div>
+                        
+                    </div><br />
+        }
+				
 					
 
 					

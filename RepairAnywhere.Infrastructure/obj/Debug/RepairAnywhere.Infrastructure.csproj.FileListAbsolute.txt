@@ -10,3 +10,15 @@ c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.csprojResolveAssemblyReference.cache
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.dll
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Infrastructure.dll.config
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Infrastructure.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Infrastructure.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.pdb

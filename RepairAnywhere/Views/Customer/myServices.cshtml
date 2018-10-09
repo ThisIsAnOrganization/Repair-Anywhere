@@ -1,5 +1,7 @@
+@model RepairAnywhere.Models.CustomerViewModel.MyServicesViewModel
 
 
+ 
 
     <div class="container-fluid">
       <!-- Breadcrumbs
@@ -11,22 +13,24 @@
       </ol>
 	  -->
       <div class="row">
+
+         
 	  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
   
-        <div class="col-12">
+        <div class="col-12  ">
 					
 	
-					<div class="panel panel-primary ">
-                        <div class="panel-heading ">
+					<div class="card">
+                        <div class="card-header bg-primary text-light ">
                             Problem
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
+                        <div class="card-body">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs">
                                 
-                                <li class="nav-item"><a class="nav-link  active" href="#Details1" data-toggle="tab">Details</a>
+                                <li class="nav-item"><a class="nav-link active" href="#Details1" data-toggle="tab">Details</a>
                                 </li>
 								
                                 <li class="nav-item"><a class="nav-link" href="#Driver1" data-toggle="tab">Service Provider</a>
@@ -35,7 +39,7 @@
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-								<div class="tab-pane fade in active" id="Details1">
+								<div class="tab-pane  in active" id="Details1">
 									<table width="100%">
 									<tr>
 									<td width="50%">
@@ -109,11 +113,13 @@
                                 </div>
                             </div>
                         </div>
-						<div class="panel-footer">
+						<div class="card-footer">
 						<h3>Total Charge: 1200 taka</h3>
 						</div>
                         <!-- /.panel-body -->
                     </div>
+
+            <br />
 					
 					
 					

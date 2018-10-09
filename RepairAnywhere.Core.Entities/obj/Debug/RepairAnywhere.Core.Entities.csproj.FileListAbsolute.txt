@@ -8,3 +8,13 @@ c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.dll
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.pdb
 c:\users\ezy\documents\visual studio 2012\Projects\RepairAnywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.dll.config
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.pdb
