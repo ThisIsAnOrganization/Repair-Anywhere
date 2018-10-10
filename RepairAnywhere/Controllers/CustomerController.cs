@@ -152,6 +152,41 @@ namespace RepairAnywhere.Controllers
             MyServicesViewModel MSVM = new MyServicesViewModel();
 
             MSVM.customer = _CustomerService.GetById(Convert.ToInt32(Session["userId"]));
+            MSVM.requests = _RequestService.GetCompletedByCustomer(MSVM.customer.CustomerID);
+
+            IEnumerable<Review> reviews = _ReviewService.GetAll();
+            int c = 0;
+            foreach (var item in MSVM.requests)
+            {
+                MSVM.repairmen[c] = _RepairmanService.GetById(item.RepairmanID);
+                MSVM.count[c]= 0;
+                MSVM.rating[c]= 0;
+                c++;
+            }
+            c = 0;
+            foreach (var item in MSVM.repairmen)
+            {
+                foreach (var item1 in reviews)
+                {
+                    if (item.RepairmanID == item1.RepairmanID)
+                    {
+                        MSVM.rating[c] += item1.Rating;
+                        MSVM.count[c]++;
+                    }
+                }
+                if (MSVM.count[c] != 0)
+                    MSVM.rating[c] = MSVM.rating[c] / MSVM.count[c];
+
+                MSVM.completecount[c] = 0;
+                IEnumerable<Request> rs = _RequestService.GetAll();
+                foreach (var item3 in rs)
+                {
+                    if((item3.Status=="Completed")&&(item3.RepairmanID==item.RepairmanID))
+                        MSVM.completecount[c]++;
+                }
+                c++;
+            }
+
 
             return View(MSVM);
         }
@@ -211,16 +246,57 @@ namespace RepairAnywhere.Controllers
             }
         }
 
-        public ActionResult tripsdetails()
+        public ActionResult tripsdetails(int id)
         {
             if (Session["userId"] == null)
                 return RedirectToAction("login", "Common");
 
             TripsDeailsViewModel TDVM = new TripsDeailsViewModel();
 
+            TDVM.request = _RequestService.GetById(id);
             TDVM.customer = _CustomerService.GetById(Convert.ToInt32(Session["userId"]));
 
+            if (TDVM.request.Status != "Pending")
+            {
+
+                TDVM.repairman = _RepairmanService.GetById(TDVM.request.RepairmanID);
+                IEnumerable<Request> requests = _RequestService.GetAll();
+                TDVM.count = 0;
+                foreach (var item in requests)
+                {
+                    if ((item.RepairmanID == TDVM.repairman.RepairmanID) && (item.Status == "Completed"))
+                        TDVM.count++;
+                }
+
+            
+                IEnumerable<Review> reviews = _ReviewService.GetAll();
+                TDVM.rating = 0;
+                double count = 0;
+
+                foreach (var item in reviews)
+                {
+                    if (item.RepairmanID == TDVM.repairman.RepairmanID)
+                    {
+                        TDVM.rating += item.Rating;
+                        count++;
+                    }
+                }
+
+                if (count != 0)
+                    TDVM.rating = TDVM.rating / count;
+
+            }
             return View(TDVM);
+        }
+
+        public ActionResult deleteRequest(int id)
+        {
+            if (Session["userId"] == null)
+                return RedirectToAction("login", "Common");
+
+            _RequestService.Delete(id);
+
+            return RedirectToAction("dashboard", "Customer");
         }
 
         public ActionResult viewProfile()

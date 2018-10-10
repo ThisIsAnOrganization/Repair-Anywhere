@@ -19,6 +19,10 @@ namespace RepairAnywhere.Core.Service.Interfaces
         IEnumerable<Request> GetActiveByCustomer(int CustomerID);
         IEnumerable<Request> GetCompletedByCustomer(int CustomerID);
 
+        IEnumerable<Request> GetPendingByRepairman(int RepairmanID);
+        IEnumerable<Request> GetActiveByRepairman(int RepairmanID);
+        IEnumerable<Request> GetCompletedByRepairman(int RepairmanID);
+
         
     }
 }

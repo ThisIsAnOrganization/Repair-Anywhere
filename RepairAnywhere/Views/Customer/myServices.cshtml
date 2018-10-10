@@ -19,8 +19,10 @@
   @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
   
         <div class="col-12  ">
-					
-	
+            @{var count=0;}
+				@foreach (var item in @Model.requests)
+    {
+        
 					<div class="card">
                         <div class="card-header bg-primary text-light ">
                             Problem
@@ -44,9 +46,10 @@
 									<tr>
 									<td width="50%">
 										<h4>Details</h4>
-										<p>
-										Starting Point:<br/>
-										Ending Point:<br/>
+										<p>Category: @item.Category<br />
+                                            Problem Description: @item.RequestDescription<br />
+										Location: @Model.customer.Address<br/>
+                                            Date of Request: @item.RequestDate 
 										
 										
 										<br/>
@@ -54,8 +57,7 @@
 										**For more detailed information, please call: 01913531384, 01913531517, 01977885507, 01914602965, 01939912533, 01937402947
 										<br/>• Call us within 10 am to 4 pm from Sunday to Thursday<br/><br/><br/>
 										
-										<b>Payment Status: Pending<br/>
-									Service Charge: 1200 tk</b></p>
+										<b>Status: @item.Status</b></p>
 									</td>
 									<td>
 										<img class="rounded" width="70%" src="../images/p5.jpg"/>
@@ -76,31 +78,33 @@
 												<table width="100%">
 													<tr>
 														<td  style="text-align:center" width="40%">
-															<h4>Service Provider Name</h4>
+															<h4>@Model.repairmen[count].Name</h4>
 														</td>
 														<td style="text-align:center">
-															Completed Services:111
+															Completed Services:@Model.completecount[count]
 														</td>
 													</tr>
 													<tr>
-														<td style="text-align:center">Rate
-															<i class="fa fa-star" style="font-size: 20px;color:#00000"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#00000"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#00000"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#00000"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#00000"></i>
+														<td style="text-align:center">Rating
+                                                            @for (int i = 0; i < @Model.rating[count]; i++)
+                                                            {
+                                                                <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
+                                                            }
 														</td>
 														<td style="text-align:center">
-															Contact No:019xxxxxxxx
+															Contact No: @Model.repairmen[count].PhoneNumber
 														</td>
 													</tr>
 													<tr>
 														<td style="text-align:center" colspan="2">
 															<br/>
-															<br/>
+															<br/>@*
+                                                            @using (Html.BeginForm("changePassword", "Customer", FormMethod.Post))
+                                        {	
 															<h4> Give Review</h4>
-															<textarea height="50px" width="150px"></textarea><br/> <br/>
-															<button class="btn btn-primary">Submut</button>
+															<textarea name="review" height="50px" width="150px"></textarea><br/> <br/>
+															<button type="submit" class="btn btn-primary">Submut</button>
+                                                            }*@
 														</td>
 													</tr>
 												</table>
@@ -114,14 +118,18 @@
                             </div>
                         </div>
 						<div class="card-footer">
-						<h3>Total Charge: 1200 taka</h3>
+						<h3>Total Charge: @item.Cost</h3>
 						</div>
                         <!-- /.panel-body -->
                     </div>
 
             <br />
 					
-					
+				}	
+            @if (count==0)
+            {
+                <h4>There are no Completed Requests</h4>
+            }
 					
 					
         </div>

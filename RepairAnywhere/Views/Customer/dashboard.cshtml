@@ -8,7 +8,9 @@
         </li>
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
+          
       <!-- Icon Cards-->
+        </div>
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-3">
           <div class="card text-white bg-primary o-hidden  "> <!--h-100-->
@@ -95,7 +97,7 @@
 									<b style="font-size:16px">
 									Status: @item.Status<br/>
 									Service Charge: @item.Cost</b>
-									<button class="pull-right btn btn-primary" onclick="window.location='tripsdetails.html'">View</button>
+									<a href="@Url.Action("tripsdetails", "Customer", new { id = @item.RequestID })"><button class="pull-right btn btn-primary" >View</button></a>
                                 </div>
 						</div>
                         
@@ -103,6 +105,7 @@
             count++;
         
         }
+        @{var c = 0;}
 
         @foreach (var item in @Model.PendingRequests)
         {
@@ -122,11 +125,17 @@
 									<b style="font-size:16px">
 									Status: @item.Status<br/>
 									Service Charge:Not yet set</b>
-									<button class="pull-right btn btn-primary" onclick="window.location='tripsdetails.html'">View</button>
+									<a href="@Url.Action("tripsdetails", "Customer", new { id = @item.RequestID })"><button class="pull-right btn btn-primary" >View</button></a>
                                 </div>
 						</div>
                         
                     </div><br />
+            c = 1;
+        }
+
+        @if ((c==0)&&(count==0))
+        {
+            <h4>There are no Active or Pending Requests</h4>
         }
 				
 					

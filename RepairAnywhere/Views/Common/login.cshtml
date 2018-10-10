@@ -1,3 +1,4 @@
+@model RepairAnywhere.Models.CommonViewModel.LoginViewModel
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,24 +71,30 @@
 			<div class="modal-content">
 				
 				<div class="modal-body" >
-					
+					@using (Html.BeginForm("login", "Common", FormMethod.Post))
+                                        {	
 		              <div class="form-label-group">
 		              	<label for="inputEmail">Username</label>
-		                <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+		                <input @*type="email"*@ id="inputEmail" name="email" class="form-control" placeholder="Username" required @*autofocus*@>
                           <br />
-                          <span id="DvalidationErr" style="color:red">
+                          @if (@Model.flag == "Invalid")
+                                        {
+                                            <p style="color:red">*This Username is not exists</p><br />
+                                        }
 		                
 		              </div>
 
 		              <div class="form-label-group">
 		              	<label for="inputPassword">Password</label>
-		                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-		                
+		                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required><br />
+		                @if (@Model.flag == "Invalid Password")
+                                        {
+                                            <p style="color:red">*Invalid Password</p><br />
+                                        }
 		              </div>
 		              <br/>
-                    <span id="validationErr" style="color:red"/>
-                        <br />
-		              <div id="loginButton"><button  class="btn btn-primary btn-block">Login</button></div><br/>
+		              <div id="loginButton"><button type="submit"  class="btn btn-primary btn-block">Login</button></div><br/>
+     }
 					  <div class="text-center">
 						  <a class="d-block small mt-3" href="forgetpass.html">Forgot Password</a>
 
@@ -234,8 +241,7 @@
 
     <script>
 
-        $("#loginButton").click(function () {
-            alert("asd");
+       @* $("#loginButton").click(function () {
             var valid = true;
             if (valid) {
 
@@ -266,7 +272,7 @@
                         }
                         else {
                             if (data == "0") {
-                                window.location = '@Url.Action("index", "Common"@*, new { id = @Model.DetailProduct.ProductId }*@)'
+                                window.location = '@Url.Action("index", "Common", new { id = @Model.DetailProduct.ProductId })'
                               }
                               if (data == "1") {
                                   window.location = '@Url.Action("dashboard", "Customer")'
@@ -282,7 +288,7 @@
 
         });
 
-
+        *@
 </script>	
 
 

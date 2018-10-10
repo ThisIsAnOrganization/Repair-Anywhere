@@ -2,6 +2,7 @@
 using RepairAnywhere.Core.Service;
 using RepairAnywhere.Core.Service.Interfaces;
 using RepairAnywhere.Infrastructure;
+using RepairAnywhere.Models.CommonViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -51,32 +52,38 @@ namespace RepairAnywhere.Controllers
             if (Session["userId"] != null)
                 return RedirectToAction("dashboard", "Customer");
 
-            return View();
+            LoginViewModel LVM = new LoginViewModel();
+            LVM.flag = "";
+            
+            return View(LVM);
         }
 
         [HttpPost]
-        public string login(string email, string password)
+        public ActionResult login(string email, string password)
         {
             Login l = _LoginService.GetByUsername(email);
+            LoginViewModel LVM = new LoginViewModel();
             if (l == null)
             {
-                return "Invalid";
+                LVM.flag = "Invalid";
+                return View(LVM);
             }
             else
             {
                 if (l.Password != password)
                 {
-                    return "Invalid Password";
+                    LVM.flag = "Invalid Password";
+                    return View(LVM);
                 }
 
                 else
                 {
                     Session["userId"] = l.UserID;
                     if (Equals(l.UserType, "admin"))
-                        return "0";
+                        return RedirectToAction("index", "Common");
 
                     else
-                        return "1";
+                        return RedirectToAction("dashboard", "Customer");
 
                 }
                     

@@ -152,6 +152,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CommonViewModel\LoginViewModel.cs" />
     <Compile Include="Models\CustomerViewModel\ChangePassowrdViewModel.cs" />
     <Compile Include="Models\CustomerViewModel\CompletedRepairsViewModel.cs" />
     <Compile Include="Models\CustomerViewModel\CustomerModel.cs" />

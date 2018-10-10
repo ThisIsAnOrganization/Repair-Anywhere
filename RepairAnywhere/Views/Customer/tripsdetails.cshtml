@@ -8,8 +8,10 @@
 									<tr>
 									<td width="50%">
 										<h4>Details</h4>
-										<p>
-										Location:<br/>
+										<p>Category: @Model.request.Category<br />
+                                            Problem Description: @Model.request.RequestDescription<br />
+										Location: @Model.customer.Address<br/>
+                                            Date of Request: @Model.request.RequestDate 
 										
 										
 										
@@ -18,8 +20,13 @@
 										**For more detailed information, please call: 01913531384, 01913531517, 01977885507, 01914602965, 01939912533, 01937402947
 										<br/>• Call us within 10 am to 4 pm from Sunday to Thursday<br/><br/><br/>
 										
-										<b>Payment Status: Pending<br/>
-									Service Charge: 1200 tk</b></p>
+										<b>Status: @Model.request.Status<br/>
+									Service Charge: @{ if (@Model.request.Cost==null)
+                         {
+                             @:Not yet set
+                         }
+                                            else{ @Model.request.Cost }}
+										</b></p>
 									</td>
 									<td>
 										<img class="rounded" width="70%" src="../images/p5.jpg"/>
@@ -27,6 +34,9 @@
 									</tr>
 									</table>
 									<hr/>
+              @if (@Model.request.Status!="Pending")
+              {
+                 
 									<table>
 										<tr>
 											<td width="30%">
@@ -36,22 +46,21 @@
 												<table width="100%">
 													<tr>
 														<td  style="text-align:center" width="40%">
-															<h4>Service Provider Name</h4>
+															<h4>Repairman: @Model.repairman.Name</h4>
 														</td>
 														<td style="text-align:center">
-															Completed Repairs:111
+															Completed Repairs: @Model.count
 														</td>
 													</tr>
 													<tr>
 														<td style="text-align:center">Rating
-															<i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-															<i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
+                                                            @for (int i = 0; i < @Model.rating; i++)
+                                                            {
+                                                                <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
+                                                            }
 														</td>
 														<td style="text-align:center">
-															Contact No:019xxxxxxxx
+															Contact No: @Model.repairman.PhoneNumber
 														</td>
 													</tr>
 													<tr>
@@ -67,6 +76,13 @@
 											</td>
 										</tr>
 									</table>
+              }
+              @if (@Model.request.Status=="Pending")
+              {
+                  <h4>Repairman Not Yet Assigned</h4><br /><br />
+                  <a href="@Url.Action("deleteRequest", "Customer", new { id = @Model.request.RequestID })"><button  class="btn btn-danger text-light" >Delete Request</button></a>
+              }
+
 		  </div>
 		</div>
     
