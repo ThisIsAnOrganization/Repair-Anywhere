@@ -1,3 +1,4 @@
+@model RepairAnywhere.Models.CommonViewModel.RegisterViewModel
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,8 +48,8 @@
 				Sign Up
 			  </span>
 			  <div class="dropdown-menu">
-				<a class="dropdown-item" href="@Url.Action("register")" >As Customer</a>
-				<a class="dropdown-item" href="@Url.Action("register")" >As Service Provider</a>
+				<a class="dropdown-item" href="@Url.Action("register", new {log="1" })" >As Customer</a>
+				<a class="dropdown-item" href="@Url.Action("register", new {log="2" })" >As Repairman</a>
 			  </div>
 			</div>
             </li>
@@ -76,6 +77,10 @@
               <div class="col-md-12">
                 <label for="exampleInputName">Username</label>
                 <input class="form-control" id="Name" name="Name" type="text" aria-describedby="nameHelp" placeholder="Enter Username">
+                  @if (@Model.flag==1)
+	{
+		 <br /><p style="color:red">*Username Already Exist</p>
+	}
               </div>
               <!-- <div class="col-md-6">
                 <label for="exampleInputLastName">Last name</label>
@@ -89,7 +94,11 @@
           </div>
 		  <div class="form-group">
             <label for="exampleInputPhoneNumber1">Phone Number</label>
-            <input class="form-control" id="PhoneNumber" name="PhoneNumber" type="phonenumber" aria-describedby="phonenumberHelp" placeholder="Phone Number" required >
+            <input class="form-control" id="PhoneNumber" name="PhoneNumber"  aria-describedby="phonenumberHelp" placeholder="Phone Number" required >
+          </div>
+            <div class="form-group">
+            <label for="exampleInputPhoneNumber1">Address</label>
+            <input class="form-control" id="address" name="address"  aria-describedby="addressHelp" placeholder="Address" required >
           </div>
           <div class="form-group">
             <div class="form-row">
@@ -100,6 +109,10 @@
               <div class="col-md-6">
                 <label for="exampleConfirmPassword">Confirm password</label>
                 <input class="form-control" id="Password" name="Password" type="password" placeholder="Confirm password" required>
+                  @if (@Model.flag==2)
+	{
+		 <br /><p style="color:red">*Password Didn't Match</p>
+	}
               </div>
             </div>
           </div>

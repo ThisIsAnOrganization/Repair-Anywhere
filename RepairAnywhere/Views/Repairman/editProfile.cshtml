@@ -1,0 +1,57 @@
+@model RepairAnywhere.Models.RepairmanViewModel.EditProfileViewModel
+			<div class="row">
+            <div class="col-lg-12">
+                    <h2 class="page-header">Edit Profile</h2>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+			 @using (Html.BeginForm("editProfile", "Repairman", FormMethod.Post))
+                                        {
+			<div class="row">
+            <div class="col-md-8">
+			
+          
+				<div class="form-label-group">
+			  <label for="inputUserame">Name</label>
+                <input type="text" id="inputName" name="name" class="form-control" placeholder="name" value="@Model.repairman.Name" required autofocus>
+                
+              </div>
+              <div class="form-label-group">
+			  <label for="inputUserame">Email</label>
+                <label>@Model.repairman.Email</label>
+                
+              </div>
+
+              <div class="form-label-group">
+			   <label for="inputEmail">Address</label>
+               <textarea type="text" rows="4" id="inputConfirmPassword" name="address" class="form-control" placeholder="Address"   required>@Model.repairman.Address
+				</textarea>
+          
+               
+              </div>
+          
+
+              <div class="form-label-group">
+			         <label for="inputPassword">Phone Number</label>
+                <input type="number" id="inputPassword" class="form-control" name="phone" placeholder="Phone Number" value="@Model.repairman.PhoneNumber" required>
+         
+              </div>
+              
+             
+			 
+          
+              <hr class="my-4">
+              
+            
+			</div>
+               
+			   
+			<div class="col-4">
+				<img src="../img/user_pic.jpg" class="img-rounded" alt="Cinque Terre" height="200px" width="200px"><br/>
+				Change Image<input type="file"/>
+			</div>
+                                       
+            </div>
+			
+			  <br/><button class="btn btn-success btn-lg btn-block text-uppercase" type="submit">Save Changes</button>
+                                        }

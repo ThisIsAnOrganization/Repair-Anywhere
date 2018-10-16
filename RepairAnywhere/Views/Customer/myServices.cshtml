@@ -47,9 +47,9 @@
 									<td width="50%">
 										<h4>Details</h4>
 										<p>Category: @item.Category<br />
-                                            Problem Description: @item.RequestDescription<br />
-										Location: @Model.customer.Address<br/>
-                                            Date of Request: @item.RequestDate 
+                                            Problem Description: @item.Description<br />
+										Location: @item.Address<br/>
+                                            Date of Request: @item.Date 
 										
 										
 										<br/>
@@ -124,7 +124,7 @@
                     </div>
 
             <br />
-					
+        count++;
 				}	
             @if (count==0)
             {

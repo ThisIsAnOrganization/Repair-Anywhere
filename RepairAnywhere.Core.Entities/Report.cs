@@ -12,8 +12,8 @@ namespace RepairAnywhere.Core.Entities
         [Key]
         public int ReportID { get; set; }
         public int CustomerID { get; set; }
-        public DateTime ReportDate { get; set; }
-        public string ReportDescription { get; set; }
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
         public int RepairmanID { get; set; }
     }
 }

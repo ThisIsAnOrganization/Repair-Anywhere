@@ -12,3 +12,17 @@ C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfac
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.dll
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Service.Interfaces\obj\Debug\RepairAnywhere.Core.Service.Interfaces.pdb

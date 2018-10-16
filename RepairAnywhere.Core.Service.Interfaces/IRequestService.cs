@@ -20,7 +20,7 @@ namespace RepairAnywhere.Core.Service.Interfaces
         IEnumerable<Request> GetCompletedByCustomer(int CustomerID);
 
         IEnumerable<Request> GetPendingByRepairman(int RepairmanID);
-        IEnumerable<Request> GetActiveByRepairman(int RepairmanID);
+        Request GetActiveByRepairman(int RepairmanID);
         IEnumerable<Request> GetCompletedByRepairman(int RepairmanID);
 
         

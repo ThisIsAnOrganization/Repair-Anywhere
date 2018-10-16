@@ -12,9 +12,7 @@ namespace RepairAnywhere.Core.Entities
         [Key]
         public int ReviewID { get; set; }
         public int CustomerID { get; set; }
-        public string CustomerName { get; set; }
         public int RepairmanID { get; set; }
-        public string RepairmanName { get; set; }
         public double Rating { get; set; }
         public string Comment { get; set; }
     }

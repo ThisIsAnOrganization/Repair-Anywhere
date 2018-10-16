@@ -90,7 +90,7 @@
 						<div style="padding:10px">
                                     <p>
                                         <img class="rounded-circle" width="10%" src="../images/user_pic.jpg"/> &nbsp &nbsp &nbsp <strong style="font-size:20px"> @Model.ActiveRepairman[count].Name</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
-                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@Model.customer.Address<br/>Requested At: @item.RequestDate</span>
+                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@item.Address<br/>Requested At: @item.Date</span>
                                     </p>
 									<i>Phone no: @Model.ActiveRepairman[count].PhoneNumber</i>
 									<hr/>
@@ -117,8 +117,8 @@
 						<div class="card-block">
 						<div style="padding:10px">
                                     <p>
-                                         &nbsp &nbsp &nbsp <strong style="font-size:20px"> @item.RequestDescription</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
-                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@Model.customer.Address<br/>Requested At: @item.RequestDate</span>
+                                         &nbsp &nbsp &nbsp <strong style="font-size:20px"> @item.Description</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
+                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@item.Address<br/>Requested At: @item.Date</span>
                                     </p>
 									@*<i>Phone no: @Model.ActiveRepairman[count].PhoneNumber</i>*@
 									<hr/>

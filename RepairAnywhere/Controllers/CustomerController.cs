@@ -40,7 +40,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult dashboard()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             DashboardViewModel DVM = new DashboardViewModel();
@@ -63,7 +63,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult changePassword()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             ChangePassowrdViewModel CPVM = new ChangePassowrdViewModel();
@@ -103,7 +103,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult completedrepairs()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             CompletedRepairsViewModel CRVM = new CompletedRepairsViewModel();
@@ -115,7 +115,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult editProfile()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             EditProfileViewModel EPVM = new EditProfileViewModel();
@@ -128,7 +128,7 @@ namespace RepairAnywhere.Controllers
         [HttpPost]
         public ActionResult editProfile(string name,string address,string phone)
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             EditProfileViewModel EPVM = new EditProfileViewModel();
@@ -146,7 +146,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult myServices()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             MyServicesViewModel MSVM = new MyServicesViewModel();
@@ -179,10 +179,13 @@ namespace RepairAnywhere.Controllers
 
                 MSVM.completecount[c] = 0;
                 IEnumerable<Request> rs = _RequestService.GetAll();
-                foreach (var item3 in rs)
+                if (item != null)
                 {
-                    if((item3.Status=="Completed")&&(item3.RepairmanID==item.RepairmanID))
-                        MSVM.completecount[c]++;
+                    foreach (var item3 in rs)
+                    {
+                        if ((item3.Status == "Completed") && (item3.RepairmanID == item.RepairmanID))
+                            MSVM.completecount[c]++;
+                    }
                 }
                 c++;
             }
@@ -193,13 +196,14 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult RequestService()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             RequestServiceViewModel RSVM = new RequestServiceViewModel();
 
             RSVM.customer = _CustomerService.GetById(Convert.ToInt32(Session["userId"]));
             RSVM.flag = 0;
+            RSVM.address = RSVM.customer.Address;
             return View(RSVM);
         }
 
@@ -233,10 +237,11 @@ namespace RepairAnywhere.Controllers
                 Request r = new Request();
 
                 r.Category = category;
-                r.RequestDescription = prob;
+                r.Description = prob;
                 r.CustomerID = RSVM.customer.CustomerID;
                 r.Status = "Pending";
-                r.RequestDate = DateTime.Now;
+                r.Date = DateTime.Now;
+                r.Address = address;
 
                 _RequestService.Insert(r);
 
@@ -248,7 +253,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult tripsdetails(int id)
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             TripsDeailsViewModel TDVM = new TripsDeailsViewModel();
@@ -291,7 +296,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult deleteRequest(int id)
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             _RequestService.Delete(id);
@@ -301,7 +306,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult viewProfile()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             ViewProfileViewModel VPVM = new ViewProfileViewModel();
@@ -312,7 +317,7 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult viewserviceprovider()
         {
-            if (Session["userId"] == null)
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             ViewServiceProviderViewModel VSVM = new ViewServiceProviderViewModel();
@@ -325,6 +330,7 @@ namespace RepairAnywhere.Controllers
         public ActionResult logout()
         {
             Session["userId"] = null;
+            Session["type"] = null;
             return RedirectToAction("index", "Common");
         }
 

@@ -12,11 +12,12 @@ namespace RepairAnywhere.Core.Entities
         [Key]
         public int RequestID { get; set; }
         public string Category { get; set; }
-        public string RequestDescription { get; set; }
-        public string Cost { get; set; }
+        public string Description { get; set; }
+        public double Cost { get; set; }
+        public string Address { get; set; }
         public int CustomerID { get; set; }
         public int RepairmanID { get; set; }
         public string Status { get; set; }
-        public DateTime RequestDate { get; set; }
+        public DateTime Date { get; set; }
     }
 }

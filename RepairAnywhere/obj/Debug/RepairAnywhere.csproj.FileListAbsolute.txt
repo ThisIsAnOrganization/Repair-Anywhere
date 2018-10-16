@@ -143,3 +143,102 @@ C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPag
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.csprojResolveAssemblyReference.cache
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.dll
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.csprojResolveAssemblyReference.cache
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Antlr3.Runtime.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.SqlServer.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.Unity.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Newtonsoft.Json.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Entities.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Infrastructure.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Net.Http.Formatting.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Helpers.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.WebHost.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Mvc.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Optimization.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Razor.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Razor.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Unity.Mvc4.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\WebGrease.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Entities.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Infrastructure.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Antlr3.Runtime.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.SqlServer.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.Unity.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Newtonsoft.Json.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Optimization.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Net.Http.Formatting.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Helpers.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.WebHost.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Mvc.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Razor.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Razor.xml
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.dll
+C:\Users\Efti\Desktop\New folder (2)\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Antlr3.Runtime.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.SqlServer.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Newtonsoft.Json.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Entities.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Infrastructure.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Net.Http.Formatting.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Helpers.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.WebHost.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Mvc.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Optimization.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Razor.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\WebGrease.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Core.Service.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\RepairAnywhere.Infrastructure.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Antlr3.Runtime.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\EntityFramework.SqlServer.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\Newtonsoft.Json.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Optimization.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Net.Http.Formatting.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Helpers.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Http.WebHost.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Mvc.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.Razor.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.csprojResolveAssemblyReference.cache
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.dll
+C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere\obj\Debug\RepairAnywhere.pdb

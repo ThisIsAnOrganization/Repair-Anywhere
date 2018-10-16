@@ -79,11 +79,25 @@ namespace RepairAnywhere.Controllers
                 else
                 {
                     Session["userId"] = l.UserID;
-                    if (Equals(l.UserType, "admin"))
+                    
+                    if (Equals(l.UserType, "Admin"))
+                    {
+                        Session["type"] = "0";
                         return RedirectToAction("index", "Common");
+                    }
+
+                    else if (Equals(l.UserType, "Repairman"))
+                    {
+                        Session["type"] = "2";
+                        return RedirectToAction("dashboard", "Repairman");
+                    }
 
                     else
+                    {
+                        Session["type"] = "1";
                         return RedirectToAction("dashboard", "Customer");
+                    }
+
 
                 }
                     
@@ -99,51 +113,102 @@ namespace RepairAnywhere.Controllers
             return View();
         }
 
-        public ActionResult register()
+        public ActionResult register(string log)
         {
             if (Session["userId"] != null)
                 return RedirectToAction("dashboard", "Customer");
 
-            return View();
+            Session["log"] = log;
+            RegisterViewModel RVM = new RegisterViewModel();
+            RVM.flag = 0;
+            return View(RVM);
         }
 
         [HttpPost]
-        public ActionResult register(string Name, string Email, string PhoneNumber, string Password1, string Password)
+        public ActionResult register(string Name, string Email, string PhoneNumber, string address, string Password1, string Password)
         {
+
+            IEnumerable<Login> logins = _LoginService.GetAll();
+            RegisterViewModel RVM = new RegisterViewModel();
+            RVM.flag = 0;
+            foreach (var item in logins)
+            {
+                if (Equals(item.Username, Name))
+                {
+                    RVM.flag = 1;
+                    return View(RVM);
+                }
+            }
+
             if (Equals(Password, Password1))
             {
-                Customer c = new Customer();
-                c.Name = Name;
-                c.Email = Email;
-                c.Password = Password1;
-                c.MemberSince = DateTime.Now;
-                c.PhoneNumber = PhoneNumber;
-                c.Address = "";
-                c.LastLogin = DateTime.Now; 
-
-                _CustomerService.Insert(c);
-
-                IEnumerable<Customer> CA = _CustomerService.GetAll();
-
-                foreach (var item in CA)
+                if (Convert.ToInt32(Session["log"]) == 1)
                 {
-                    c = item;
+                    Customer c = new Customer();
+                    c.Name = Name;
+                    c.Email = Email;
+                    c.Password = Password1;
+                    c.MemberSince = DateTime.Now;
+                    c.PhoneNumber = PhoneNumber;
+                    c.Address = address;
+                    c.LastLogin = DateTime.Now;
+
+                    _CustomerService.Insert(c);
+
+                    IEnumerable<Customer> CA = _CustomerService.GetAll();
+
+                    foreach (var item in CA)
+                    {
+                        c = item;
+                    }
+
+                    Login l = new Login();
+                    l.Username = Name;
+                    l.Password = Password1;
+                    l.UserType = "Customer";
+                    l.UserID = c.CustomerID;
+
+                    _LoginService.Insert(l);
+
                 }
 
-                Login l = new Login();
-                l.Username = Name;
-                l.Password = Password1;
-                l.UserType = "customer";
-                l.UserID = c.CustomerID;
+                else
+                {
+                    Repairman r = new Repairman();
+                    r.Name = Name;
+                    r.Email = Email;
+                    r.Password = Password1;
+                    r.MemberSince = DateTime.Now;
+                    r.PhoneNumber = PhoneNumber;
+                    r.Address = address;
+                    r.LastLogin = DateTime.Now;
+                    r.Status = "Idle";
+                    _RepairmanService.Insert(r);
 
-                _LoginService.Insert(l);
+                    IEnumerable<Repairman> RA = _RepairmanService.GetAll();
 
+                    foreach (var item in RA)
+                    {
+                        r = item;
+                    }
 
+                    Login l = new Login();
+                    l.Username = Name;
+                    l.Password = Password1;
+                    l.UserType = "Repairman";
+                    l.UserID = r.RepairmanID;
+
+                    _LoginService.Insert(l);
+                }
                 return RedirectToAction("index", "Common");
 
 
             }
-            return View();
+            else
+            {
+                RVM.flag = 2;
+                return View(RVM);
+            }
         }
     }
 }

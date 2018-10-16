@@ -1,0 +1,144 @@
+@model RepairAnywhere.Models.RepairmanViewModel.DashboardViewModel
+	
+	
+			<div class="row">
+            <div class="col-lg-12">
+                    <h2 class="page-header">Dashboard</h2>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div>New Report</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class=" col-md-3">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-car fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>Completed Report</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="card-footer text-white clearfix small z-1" href="completedrepair.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class=" col-md-3">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div>Pending Report</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class=" col-md-3">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">13</div>
+                                    <div>Failed Report</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="row">
+                @{ if (@Model.request != null)
+                   {
+				<div class="">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Active Service
+                        </div>
+                        
+						<div class="panel-body">
+                                    <p>
+                                        <img class="rounded" width="10%" src="../img/user_pic.jpg"/> &nbsp &nbsp &nbsp <strong style="font-size:20px"> @Model.customer.Name</strong><!--<img class="rounded" style="padding-left:15%" width="40%" src="../img/p1.jpg"/>-->
+                                        <span class="pull-right text-muted" style="font-size:16px"><br/>@Model.request.Address<br/>Requested at : @Model.request.Date</span>
+                                    </p>
+									<i>Phone no: @Model.customer.PhoneNumber</i>
+									<hr/>
+									<b style="font-size:16px">
+									Payment Status: Pending<br/>
+                                        @if (@Model.request.Cost!=0)
+	{
+		 @:Total Cost: @Model.request.Cost
+	}
+									@if (@Model.request.Cost==0)
+	{
+		 @:Total Cost: Not Yet Set
+	}</b>
+									<a href="@Url.Action("activerepair", "Repairman", new { id = @Model.request.RequestID })"><button class="pull-right btn btn-primary" >View</button></a>
+                                </div>
+                        
+                    </div>
+                    <!-- /.col-lg-4 -->
+                </div>
+                }
+                   else
+                   {
+                       <h4>No Active Service</h4>
+                   }
+                   }
+			</div>
+			
+			
+			
+	

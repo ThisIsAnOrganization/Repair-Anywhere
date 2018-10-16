@@ -90,9 +90,9 @@ namespace RepairAnywhere.Core.Service
             return _context.Set<Request>().Where(i => i.RepairmanID == RepairmanID && i.Status == "Pending").ToList();
         }
 
-        public IEnumerable<Request> GetActiveByRepairman(int RepairmanID)
+        public Request GetActiveByRepairman(int RepairmanID)
         {
-            return _context.Set<Request>().Where(i => i.RepairmanID == RepairmanID && i.Status == "Active").ToList();
+            return _context.Set<Request>().Where(i => i.RepairmanID == RepairmanID && i.Status == "Active").SingleOrDefault();
         }
 
         public IEnumerable<Request> GetCompletedByRepairman(int RepairmanID)

@@ -9,9 +9,9 @@
 									<td width="50%">
 										<h4>Details</h4>
 										<p>Category: @Model.request.Category<br />
-                                            Problem Description: @Model.request.RequestDescription<br />
-										Location: @Model.customer.Address<br/>
-                                            Date of Request: @Model.request.RequestDate 
+                                            Problem Description: @Model.request.Description<br />
+										Location: @Model.request.Address<br/>
+                                            Date of Request: @Model.request.Date 
 										
 										
 										
@@ -21,7 +21,7 @@
 										<br/>• Call us within 10 am to 4 pm from Sunday to Thursday<br/><br/><br/>
 										
 										<b>Status: @Model.request.Status<br/>
-									Service Charge: @{ if (@Model.request.Cost==null)
+									Service Charge: @{ if (@Model.request.Cost==0)
                          {
                              @:Not yet set
                          }
