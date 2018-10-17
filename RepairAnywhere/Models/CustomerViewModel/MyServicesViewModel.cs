@@ -13,5 +13,7 @@ namespace RepairAnywhere.Models.CustomerViewModel
         public int[] count = new int[1000];
         public int[] completecount = new int[1000];
         public double[] rating = new double[1000];
+        public string[] details = new string[1000];
+        public string[] drivers = new string[1000];
     }
 }

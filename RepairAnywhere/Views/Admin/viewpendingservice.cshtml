@@ -1,0 +1,101 @@
+﻿@model RepairAnywhere.Models.AdminViewModel.ViewPendingServiceViewModel
+<div class="panel panel-primary ">
+                        <div class="panel-heading ">
+                            Detailed Service
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+	
+					<table width="100%">
+									<tr>
+									<td width="50%">
+										<h4>Details</h4>
+										<p>Category: @Model.request.Category<br />
+                                            Problem Description: @Model.request.Description<br />
+										Location: @Model.request.Address<br/>
+                                            Date of Request: @Model.request.Date 
+			
+										<br/>
+										<br/>
+										**For more detailed information, please call: 01913531384, 01913531517, 01977885507, 01914602965, 01939912533, 01937402947
+										<br/>• Call us within 10 am to 4 pm from Sunday to Thursday<br/><br/><br/>
+										
+										<b>Status: @Model.request.Status<br/>
+									Service Charge: Not Set yet
+										</b></p>
+									</td>
+									<td>
+										<img class="rounded" width="70%" src="../img/p5.jpg"/>
+									</td>
+									</tr>
+									</table>
+                            <hr />
+                            <table>
+										<tr>
+											<td width="30%">
+											<img class="rounded-circle" width="70%" src="~/Styles/Admin/img/user_pic.jpg"/>
+											</td>
+											<td style="text-align:center">
+												<table width="100%">
+													<tr>
+														<td  style="text-align:center" width="40%">
+															<h4>Customer: @Model.customer.Name</h4>
+														</td>
+													</tr>
+													<tr>
+														
+														<td style="text-align:center">
+															Contact No: @Model.customer.PhoneNumber
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+											</td>
+										</tr>
+									</table>
+           
+                        </div>
+    <hr />
+						<div style="padding-left:20px;padding-bottom:20px">
+						<a href="@Url.Action("deleteRequest", "Admin", new { id = @Model.request.RequestID })"><button class="btn btn-danger" >Delete Request</button></a>
+						</div>
+    <hr />
+
+                        <!-- /.panel-body -->
+    <div class="table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+			<thead>
+                <tr>
+                    <th>Repairman</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @Model.repairmen)
+                {
+                    <tr class="odd gradeX">
+                    <td><a href="serviceprovider.html">@item.Name</a></td>
+                    <td>@item.Email</td>
+                    <td>@item.PhoneNumber</td>
+                    <td >@item.Address</td>
+                    <td class="center"><a href="@Url.Action("assignRepairman", "Admin", new { id = @Model.request.RequestID,rid=@item.RepairmanID })"><button class="btn btn-primary" >Assign</button></a></td>
+                </tr>
+                }
+                
+                
+            </tbody>
+        </table>
+    </div>
+                    </div>
+
+<script>
+$(document).ready(function() {
+    $('#dataTables-example').DataTable({
+        responsive: true
+    });
+});
+</script>
+			

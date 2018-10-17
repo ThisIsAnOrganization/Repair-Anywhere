@@ -189,7 +189,13 @@ namespace RepairAnywhere.Controllers
                 }
                 c++;
             }
-
+            c = 0;
+            foreach (var item in MSVM.requests)
+            {
+                MSVM.details[c] = "Details" + Convert.ToString(c + 1);
+                MSVM.drivers[c] = "Drivers" + Convert.ToString(c + 1);
+                c++;
+            }
 
             return View(MSVM);
         }

@@ -14,5 +14,7 @@ namespace RepairAnywhere.Core.Service.Interfaces
         bool Insert(Repairman repairman);
         bool Update(Repairman repairman);
         bool Delete(int RepairmanId);
+
+        IEnumerable<Repairman> GetAllIdle();
     }
 }

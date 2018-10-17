@@ -32,16 +32,16 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs">
                                 
-                                <li class="nav-item"><a class="nav-link active" href="#Details1" data-toggle="tab">Details</a>
+                                <li class="nav-item"><a class="nav-link active" href="#@Model.details[count]" data-toggle="tab">Details</a>
                                 </li>
 								
-                                <li class="nav-item"><a class="nav-link" href="#Driver1" data-toggle="tab">Service Provider</a>
+                                <li class="nav-item"><a class="nav-link" href="#@Model.drivers[count]" data-toggle="tab">Service Provider</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-								<div class="tab-pane  in active" id="Details1">
+								<div class="tab-pane  in active" id="@Model.details[count]">
 									<table width="100%">
 									<tr>
 									<td width="50%">
@@ -67,7 +67,7 @@
 								</div>
                                 
                                 
-                                <div class="tab-pane fade" id="Driver1">
+                                <div class="tab-pane fade" id="@Model.drivers[count]">
                                     <h4>Service Provider</h4>
 									<table>
 										<tr>

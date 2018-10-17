@@ -1,0 +1,45 @@
+@model RepairAnywhere.Models.AdminViewModel.ServiceProviderViewModel
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Service Provider</h1>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row" >
+  
+  @foreach (var item in @Model.repairmen)
+  {
+      <div class="col-sm-3">
+    <div class="row" align="center">
+        <img src="~/Styles/Admin/img/c.jpg" class="img-circle" alt="Cinque Terre" style="width: 70%;" >
+    </div>
+      <div class="row" align="center">
+        <label>@item.Name</label>
+    </div>
+    <div class="row" align="center">
+        <a href="@Url.Action("viewprofileservice", "Admin", new { id=@item.RepairmanID})"><button type="button" class="btn btn-success">View Profile</button></a>
+    </div>
+  </div>
+  }
+
+  
+
+</div>
+
+
+
+
+
+<!-- Custom Theme JavaScript -->
+<script src="~/Styles/Admin/dist/js/sb-admin-2.js"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+$(document).ready(function() {
+    $('#dataTables-example').DataTable({
+        responsive: true
+    });
+});
+</script>

@@ -82,8 +82,8 @@ namespace RepairAnywhere.Controllers
                     
                     if (Equals(l.UserType, "Admin"))
                     {
-                        Session["type"] = "0";
-                        return RedirectToAction("index", "Common");
+                        Session["type"] = "3";
+                        return RedirectToAction("dashboard", "Admin");
                     }
 
                     else if (Equals(l.UserType, "Repairman"))

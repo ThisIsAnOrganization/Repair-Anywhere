@@ -68,5 +68,10 @@ namespace RepairAnywhere.Core.Service
             }
             return true;
         }
+
+        public IEnumerable<Repairman> GetAllIdle()
+        {
+            return _context.Set<Repairman>().Where(i => i.Status == "Idle");
+        }
     }
 }
