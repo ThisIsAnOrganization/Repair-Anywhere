@@ -37,3 +37,4 @@ C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Re
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.dll
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache

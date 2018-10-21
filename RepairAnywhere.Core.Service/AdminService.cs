@@ -69,5 +69,10 @@ namespace RepairAnywhere.Core.Service
             return true;
         }
 
+        public IEnumerable<Admin> GetByName(string name)
+        {
+            return _context.Set<Admin>().Where(i => i.Name.Contains(name));
+        }
+
     }
 }

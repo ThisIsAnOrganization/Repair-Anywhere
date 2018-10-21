@@ -46,6 +46,17 @@
                 }
 			</div>
 		    </td>
+            <td style="text-align:center" colspan="2">
+				<label >Location:</label><input class="rounded" name="address" @if (@Model.address != "") 
+                                                                   { 
+                                                                       @:value="@Model.address" 
+                                                                       } width="276" />
+                @if (@Model.flag==3)
+                {
+                    <br /><p style="color:red">*Location Required</p>
+                }<br/>
+				  <br/>
+			</td>
             <td><label>Problem Defination</label><br/>
 			<textarea name="prob" style="width:100%;height:100px" class="rounded">@if (@Model.prob != "")
                                                 { 
@@ -58,23 +69,7 @@
             </td>
 
 		</tr>
-		<tr >
-			<td style="text-align:center" colspan="2">
-				<label >Location:</label><input class="rounded" name="address" @if (@Model.address != "") 
-                                                                   { 
-                                                                       @:value="@Model.address" 
-                                                                       } width="276" />
-                @if (@Model.flag==3)
-                {
-                    <br /><p style="color:red">*Location Required</p>
-                }<br/>
-				  <br/>
-			</td>
-			@*<td>
-				<label >Estimated Cost</label><input  width="276" disabled /><br/>
-				  <br/>
-			</td>*@
-		</tr>
+		
 	</table>
 	<br/>
 	@*<div id="map" style="width:100%;height:400px;"></div>*@<br/><br/>

@@ -10,5 +10,7 @@ namespace RepairAnywhere.Models.AdminViewModel
     {
         public IEnumerable<Request> requests { get; set; }
         public Customer[] customers = new Customer[1000];
+        public int activeCount { get; set; }
+        public int completeCount { get; set; }
     }
 }

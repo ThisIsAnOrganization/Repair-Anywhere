@@ -73,5 +73,10 @@ namespace RepairAnywhere.Core.Service
         {
             return _context.Set<Repairman>().Where(i => i.Status == "Idle");
         }
+
+        public IEnumerable<Repairman> GetByName(string name)
+        {
+            return _context.Set<Repairman>().Where(i => i.Name.Contains(name));
+        }
     }
 }

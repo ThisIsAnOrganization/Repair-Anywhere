@@ -11,5 +11,6 @@ namespace RepairAnywhere.Models.AdminViewModel
         public Request request { get; set; }
         public Customer customer { get; set; }
         public IEnumerable<Repairman> repairmen { get; set; }
+        public Repairman repairmanActive { get; set; }
     }
 }

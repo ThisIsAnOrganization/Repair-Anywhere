@@ -173,7 +173,25 @@ namespace RepairAnywhere.Controllers
             if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 2))
                 return RedirectToAction("login", "Common");
 
-            return View();
+            CompletedRepairViewModel CRVM = new CompletedRepairViewModel();
+
+            CRVM.repairman = _RepairmanService.GetById(Convert.ToInt32(Session["userId"]));
+            IEnumerable<Request> r = _RequestService.GetAllByRepairman(CRVM.repairman.RepairmanID);
+            int c = 0;
+            foreach (var item in r)
+            {
+                if(Equals(item.Status,"Completed"))
+                {
+                    CRVM.requests[c] = item;
+                    CRVM.customers[c] = _CustomerService.GetById(item.CustomerID);
+                    c++;
+                }
+            }
+
+
+
+
+            return View(CRVM);
         }
 
         public ActionResult viewDriver()

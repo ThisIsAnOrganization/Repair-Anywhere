@@ -27,6 +27,23 @@
     <!-- Custom Fonts -->
     <link href="~/Styles/Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="~/Styles/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="~/Styles/Admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="~/Styles/Admin/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="~/Styles/Admin/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Styles/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Styles/Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
     
 
 </head>
@@ -86,7 +103,7 @@
                                     <a href="@Url.Action("admin","Admin")">Admin</a>
                                 </li>
                                 <li>
-                                    <a href="@Url.Action("serviceprovider","Admin")">Service Provider</a>
+                                    <a href="@Url.Action("serviceprovider","Admin")">Repairman</a>
                                 </li>
                                 <li>
                                     <a href="@Url.Action("customer","Admin")">Customer</a>
@@ -141,6 +158,31 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="~/Styles/Admin/dist/js/sb-admin-2.js"></script>
+
+    <script src="~/Styles/Admin/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Styles/Admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Styles/Admin/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="~/Styles/Admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Styles/Admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="~/Styles/Admin/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Styles/Admin/dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 
 </body>
 

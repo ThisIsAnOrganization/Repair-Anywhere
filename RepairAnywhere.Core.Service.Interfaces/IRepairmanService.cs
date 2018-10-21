@@ -16,5 +16,7 @@ namespace RepairAnywhere.Core.Service.Interfaces
         bool Delete(int RepairmanId);
 
         IEnumerable<Repairman> GetAllIdle();
+
+        IEnumerable<Repairman> GetByName(string name);
     }
 }

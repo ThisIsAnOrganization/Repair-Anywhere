@@ -1,4 +1,23 @@
 ﻿@model RepairAnywhere.Models.AdminViewModel.ViewPendingServiceViewModel
+
+<link href="~/Styles/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="~/Styles/Admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="~/Styles/Admin/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="~/Styles/Admin/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Styles/Admin/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Styles/Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
 <div class="panel panel-primary ">
                         <div class="panel-heading ">
                             Detailed Service
@@ -63,18 +82,40 @@
     <hr />
 
                         <!-- /.panel-body -->
-    <div class="table-responsive">
+    
+
+    
+            
+            <!-- /.row -->
+               
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            DataTables Advanced Tables
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-			<thead>
-                <tr>
-                    <th>Repairman</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Address</th>
+                                <thead>
+                                    <tr>
+                                        <th>Repairman</th>
+                                        <th>Email</th>
+                                        <th>Phone Number</th>
+                                        <th>Address</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (@Model.repairmanActive != null)
+                                    {
+                                        <tr class="odd gradeX">
+                    <td><a href="serviceprovider.html">@Model.repairmanActive.Name</a></td>
+                    <td>@Model.repairmanActive.Email</td>
+                    <td>@Model.repairmanActive.PhoneNumber</td>
+                    <td >@Model.repairmanActive.Address</td>
+                    <td class="center"><a href="@Url.Action("undoRepairman", "Admin", new { id = @Model.request.RequestID,rid=@Model.repairmanActive.RepairmanID })"><button class="btn btn-danger" >Undo</button></a></td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in @Model.repairmen)
+                                    }
+                                    @foreach (var item in @Model.repairmen)
                 {
                     <tr class="odd gradeX">
                     <td><a href="serviceprovider.html">@item.Name</a></td>
@@ -84,18 +125,38 @@
                     <td class="center"><a href="@Url.Action("assignRepairman", "Admin", new { id = @Model.request.RequestID,rid=@item.RepairmanID })"><button class="btn btn-primary" >Assign</button></a></td>
                 </tr>
                 }
-                
-                
-            </tbody>
-        </table>
-    </div>
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
+                            
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+            
+            
+            
+      
+
+    
                     </div>
 
-<script>
-$(document).ready(function() {
-    $('#dataTables-example').DataTable({
-        responsive: true
-    });
-});
-</script>
+<script src="~/Styles/Admin/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Styles/Admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Styles/Admin/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="~/Styles/Admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Styles/Admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="~/Styles/Admin/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Styles/Admin/dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    
 			

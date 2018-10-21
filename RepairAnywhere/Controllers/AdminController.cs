@@ -54,6 +54,9 @@ namespace RepairAnywhere.Controllers
                 count++;
             }
 
+            DVM.activeCount = _RequestService.GetAllActive().Count();
+            DVM.completeCount = _RequestService.GetAllCompleted().Count();
+
             return View(DVM);
         }
 
@@ -66,6 +69,20 @@ namespace RepairAnywhere.Controllers
             AVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
 
             AVM.admins = _AdminService.GetAll();
+
+            return View(AVM);
+        }
+
+        [HttpPost]
+        public ActionResult admin(string name)
+        {
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 3))
+                return RedirectToAction("login", "Common");
+
+            AdminViewModel AVM = new AdminViewModel();
+            AVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
+
+            AVM.admins = _AdminService.GetByName(name);
 
             return View(AVM);
         }
@@ -142,6 +159,20 @@ namespace RepairAnywhere.Controllers
             return View(CVM);
         }
 
+        [HttpPost]
+        public ActionResult customer(string name)
+        {
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 3))
+                return RedirectToAction("login", "Common");
+
+            CustomerViewModel CVM = new CustomerViewModel();
+            CVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
+
+            CVM.customers = _CustomerService.GetByName(name);
+
+            return View(CVM);
+        }
+
         public ActionResult editprofile()
         {
             if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 3))
@@ -200,6 +231,20 @@ namespace RepairAnywhere.Controllers
             SPVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
 
             SPVM.repairmen = _RepairmanService.GetAll();
+
+            return View(SPVM);
+        }
+
+        [HttpPost]
+        public ActionResult serviceprovider(string name)
+        {
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 3))
+                return RedirectToAction("login", "Common");
+
+            ServiceProviderViewModel SPVM = new ServiceProviderViewModel();
+            SPVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
+
+            SPVM.repairmen = _RepairmanService.GetByName(name);
 
             return View(SPVM);
         }
@@ -272,6 +317,10 @@ namespace RepairAnywhere.Controllers
             VPSVM.request = _RequestService.GetById(id);
             VPSVM.customer = _CustomerService.GetById(VPSVM.request.CustomerID);
             VPSVM.repairmen = _RepairmanService.GetAllIdle();
+            if (VPSVM.request.RepairmanID != 0)
+                VPSVM.repairmanActive = _RepairmanService.GetById(VPSVM.request.RepairmanID);
+            else
+                VPSVM.repairmanActive = null;
 
             return View(VPSVM);
         }
@@ -293,9 +342,64 @@ namespace RepairAnywhere.Controllers
             Repairman r1 = _RepairmanService.GetById(rid);
             r1.Status = "Active";
             _RepairmanService.Update(r1);
+            
 
-            return RedirectToAction("dashboard");
+            return RedirectToAction("viewpendingservice", new { id=r.RequestID});
 
+        }
+
+        
+
+        public ActionResult undoRepairman(int id, int rid)
+        {
+            Request r = _RequestService.GetById(id);
+            r.RepairmanID = 0;
+            r.Status = "Pending";
+            _RequestService.Update(r);
+
+            Repairman r1 = _RepairmanService.GetById(rid);
+            r1.Status = "Idle";
+            _RepairmanService.Update(r1);
+
+
+            return RedirectToAction("viewpendingservice", new { id = r.RequestID });
+
+        }
+
+        public ActionResult viewactiveservices(string status)
+        {
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 3))
+                return RedirectToAction("login", "Common");
+
+            ViewActiveServiceViewModel VASVM = new ViewActiveServiceViewModel();
+            VASVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
+
+            if (Equals("Completed", status))
+            {
+                VASVM.requests = _RequestService.GetAllCompleted();
+            }
+
+            else if (Equals("Active", status))
+            {
+                VASVM.requests = _RequestService.GetAllActive();
+            }
+
+            
+            int count = 0;
+            foreach (var item in VASVM.requests)
+            {
+                if (Equals(item.Status,status))
+                {
+                    VASVM.customers[count] = _CustomerService.GetById(item.CustomerID);
+                    VASVM.repairmen[count] = _RepairmanService.GetById(item.RepairmanID);
+                    count++;
+                }
+                
+                
+            }
+            VASVM.status = status;
+            
+            return View(VASVM);
         }
     }
 }

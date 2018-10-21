@@ -14,5 +14,7 @@ namespace RepairAnywhere.Core.Service.Interfaces
         bool Insert(Admin admin);
         bool Update(Admin admin);
         bool Delete(int AdminId);
+
+        IEnumerable<Admin> GetByName(string name);
     }
 }
