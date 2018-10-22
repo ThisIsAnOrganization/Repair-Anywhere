@@ -72,7 +72,7 @@
 									<table>
 										<tr>
 											<td width="30%">
-											<img class="rounded-circle" width="70%" src="../images/user_pic.jpg"/>
+											<img class="rounded-circle" width="70%" src="~/Styles/Customer/images/user_pic.jpg"/>
 											</td>
 											<td style="text-align:center">
 												<table width="100%">
@@ -85,13 +85,13 @@
 														</td>
 													</tr>
 													<tr>
-														<td style="text-align:center">Rating
+														@*<td style="text-align:center">Rating
                                                             @for (int i = 0; i < @Model.rating[count]; i++)
                                                             {
                                                                 <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
                                                             }
-														</td>
-														<td style="text-align:center">
+														</td>*@
+														<td colspan="2" style="text-align:center">
 															Contact No: @Model.repairmen[count].PhoneNumber
 														</td>
 													</tr>
@@ -105,6 +105,7 @@
 															<textarea name="review" height="50px" width="150px"></textarea><br/> <br/>
 															<button type="submit" class="btn btn-primary">Submut</button>
                                                             }*@
+                                                            <button onclick="window.location='@Url.Action("viewserviceprovider", "Customer", new { id = @Model.repairmen[count].RepairmanID })';" class="btn btn-secondary" >Reviews</button>
 														</td>
 													</tr>
 												</table>

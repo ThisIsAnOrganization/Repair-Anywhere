@@ -40,7 +40,7 @@
 									<table>
 										<tr>
 											<td width="30%">
-											<img class="rounded-circle" width="70%" src="../images/user_pic.jpg"/>
+											<img class="rounded-circle" width="70%" src="~/Styles/Customer/images/user_pic.jpg"/>
 											</td>
 											<td style="text-align:center">
 												<table width="100%">
@@ -62,6 +62,13 @@
 														<td  style="text-align:center" colspan="2">
 															<br/>
 															<br/>
+														</td>
+													</tr>
+                                                    <tr>
+														<td  style="text-align:center" colspan="2">
+															<br/>
+															<br/>
+															<button onclick="window.location='@Url.Action("viewserviceprovider", "Customer", new { id = @Model.repairman.RepairmanID })';" class="btn btn-secondary" >Reviews</button>
 														</td>
 													</tr>
 												</table>

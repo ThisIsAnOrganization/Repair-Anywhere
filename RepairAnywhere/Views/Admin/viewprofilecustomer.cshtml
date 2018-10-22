@@ -60,16 +60,20 @@
                         </tr>
                   </tbody>
                 </table>
+
+
                                          
             </div>
 
     </div>
+<br /><br />
 <div class="row">
+    <div class="panel-heading"><b>All Services</b></div>
     <div class="panel-body">
          <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
             <thead>
                 <tr>
-                    <th>Service Provider</th>
+                    <th>Repairman</th>
                     <th>Location</th>
                     <th>Date</th>
                     <th>Amount</th>
@@ -81,7 +85,16 @@
                 @foreach (var item in @Model.requests)
                 {
                     <tr class="odd gradeX">
-                    <td><a href="@Url.Action("viewprofileservice", "Admin", new { id=@item.RepairmanID})">@Model.repairmen[count].Name</a></td>
+                    <td>
+                        @if(item.RepairmanID!=0)
+                        {
+                        <a href="@Url.Action("viewprofileservice", "Admin", new { id=@item.RepairmanID})">@Model.repairmen[count].Name</a>
+                        }
+                        @if (item.RepairmanID == 0)
+                        {
+                            @:Not yet Assigned &nbsp <button class="btn btn-primary" onclick="window.location='@Url.Action("viewpendingservice", "Admin", new { id = @item.RequestID })';">Assign</button>
+                        }
+                    </td>
                     <td>@item.Address</td>
                     <td class="center">@item.Date</td>
                     <td class="center">@if (@item.Cost > 0) 

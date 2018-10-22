@@ -162,6 +162,7 @@
     <Compile Include="Models\AdminViewModel\CustomerViewModel.cs" />
     <Compile Include="Models\AdminViewModel\DashboardViewModel.cs" />
     <Compile Include="Models\AdminViewModel\EditProfileViewModel.cs" />
+    <Compile Include="Models\AdminViewModel\RepairmanReviewViewModel.cs" />
     <Compile Include="Models\AdminViewModel\RequestsViewModel.cs" />
     <Compile Include="Models\AdminViewModel\ServiceProviderViewModel.cs" />
     <Compile Include="Models\AdminViewModel\ViewActiveServiceViewModel.cs" />
@@ -186,6 +187,7 @@
     <Compile Include="Models\RepairmanViewModel\CompletedRepairViewModel.cs" />
     <Compile Include="Models\RepairmanViewModel\DashboardViewModel.cs" />
     <Compile Include="Models\RepairmanViewModel\EditProfileViewModel.cs" />
+    <Compile Include="Models\RepairmanViewModel\MyReviewViewModel.cs" />
     <Compile Include="Models\RepairmanViewModel\RepairmanModel.cs" />
     <Compile Include="Models\RepairmanViewModel\ViewDriverViewModel.cs" />
     <Compile Include="Models\RepairmanViewModel\ViewProfileViewModel.cs" />
@@ -2091,6 +2093,8 @@
     <Content Include="Styles\Admin\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Styles\Admin\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Views\Admin\viewactiveservices.cshtml" />
+    <Content Include="Views\Repairman\myReviews.cshtml" />
+    <Content Include="Views\Admin\repairmanReview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

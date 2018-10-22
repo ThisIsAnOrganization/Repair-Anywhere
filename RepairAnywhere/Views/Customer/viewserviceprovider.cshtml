@@ -16,33 +16,19 @@ td {text-align:center}
         <div class="col-12">
 		<table width="70%" class="center" style="margin: 0px auto;" >
 				<tr>
-					<td colspan="3">
-						  <img src="../images/user_pic.jpg" style="width:12%" class="rounded-circle">
-						  <h2>Service Provider Name</h2>
+					<td colspan="2">
+						  <img src="~/Styles/Customer/images/user_pic.jpg" style="width:12%" class="rounded-circle">
+						  <h2>@Model.repairman.Name</h2>
 						  <br/>
 						  <br/>
 					</td>
 				</tr>
 				<tr>
-					<td width="33%">
-						<div style="margin: 0px auto;width:50%" class="card bg-secondary text-white">
-						<b>Rating</b>
-						<p> 
-                      <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-                      <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-                      <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-                      <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-                      <i class="fa fa-star" style="font-size: 20px;color:#FFDF00"></i>
-                      </p>  
-					  
-						</div>
-						<br/>
-						<br/>
-					</td>
-					<td width="33%">
+					
+					<td width="50%">
 						<div style="margin: 0px auto;width:60%" class="card bg-secondary text-white">
 						<b>Experience</b>
-						<p>2 years</p>
+						<p>@Model.experience</p>
 						</div>
 						<br/>
 						<br/>
@@ -50,7 +36,7 @@ td {text-align:center}
 					<td >
 						<div style="margin: 0px auto;width:65%" class="card bg-secondary text-white">
 						<b>Completed Services</b>
-						<p>21321</p>
+						<p>@Model.completed</p>
 						</div>
 						<br/>
 						<br/>
@@ -59,33 +45,55 @@ td {text-align:center}
 					
 				</tr>
 				<tr>
-					<td  ><button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#messageModal">Message</button><br/><br/></td>
-					<td><br/><br/></td>
-					<td  ><input type="button" class="btn btn-outline-primary" value="Show Phone No." onclick="change()" id="myButton1"/><br/><br/></td>
+					<td  colspan="2"><input type="button" class="btn btn-outline-primary" value="Show Phone No." onclick="change()" id="myButton1"/><br/><br/></td>
 				</tr>
-				<tr>
-					<td colspan="3">
-						<textarea style="width:50%;height:100px" class="rounded"></textarea><br/><br/>
-						<button class="btn btn-outline-primary">Give Review</button>
+            @if (@Model.flag==0)
+            {
+                <tr>
+					<td colspan="2">
+                        @using (Html.BeginForm("addReview", "Customer", new { rid=@Model.repairman.RepairmanID}))
+                        {
+						<textarea style="width:50%;height:100px" name="desc" class="rounded"></textarea><br/><br/>
+						<button type="submit" class="btn btn-outline-primary">Give Review</button>
+                        }
 					</td>
 				</tr>
+            }
+				
 				<tr>
-					<td colspan="3">
+					<td colspan="2">
 					<br/>
 						<b>Reviews</b><br/><br/>
 						<table class="table table-primary table-striped">
-							<tr >
-								<td width="10%"><img src="../images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>John</b></td>
-								<td class="text-justify">Good Service</td>
+                            
+                                @foreach (var item in @Model.reviews) 
+                                {
+                                    if (item.CustomerID==Model.customer.CustomerID)
+                                    {
+                                        <tr >
+								<td width="10%"><img src="~/Styles/Customer/images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>@Model.customer.Name</b></td>
+								<td class="text-justify">@item.Comment</td>
+                                    <td style="text-align:right;"><a href="@Url.Action("deleteReview", "Customer", new { rid = @Model.repairman.RepairmanID,revid=@item.ReviewID })"><i style="font-size:25px" class="fa fa-trash" aria-hidden="true"></i></a></td>
 							</tr>
-							<tr >
-								<td width="10%"><img src="../images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>John</b></td>
-								<td class="text-justify">Good Service</td>
+                                    }
+                                
+                                }
+                            
+
+                            @{int c = 0;}
+                            @foreach (var item in @Model.reviews)
+                            {
+                                if (item.CustomerID!=Model.customer.CustomerID)
+                                    {
+                                <tr >
+								<td width="10%"><img src="~/Styles/Customer/images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>@Model.customers[c].Name</b></td>
+								<td class="text-justify">@item.Comment</td>
+                                    <td></td>
 							</tr>
-							<tr >
-								<td width="10%"><img src="../images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>John</b></td>
-								<td class="text-justify">Good Service</td>
-							</tr>
+                            }
+                                c++;
+                            }
+							
 						</table>
 					</td>
 				</tr>
@@ -131,6 +139,6 @@ td {text-align:center}
 	<script>
 function change()
 {
-    document.getElementById("myButton1").value="01911111111"; 
+    document.getElementById("myButton1").value="@Model.repairman.PhoneNumber"; 
 }
 </script>

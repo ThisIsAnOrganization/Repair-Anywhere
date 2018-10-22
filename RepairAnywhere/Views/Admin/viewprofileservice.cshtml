@@ -63,11 +63,15 @@
                         </tr>
                   </tbody>
                 </table>
+
+        <button class="btn btn-primary" onclick="window.location='@Url.Action("repairmanReview", "Admin", new { id=@Model.repairman.RepairmanID})';">Reviews</button>
                                          
             </div>
 
     </div>
+<br /><br />
 <div class="row">
+    <div class="panel-heading"><b>All Services</b></div>
     <div class="panel-body">
          <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
             <thead>

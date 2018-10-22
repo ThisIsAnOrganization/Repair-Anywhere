@@ -68,5 +68,15 @@ namespace RepairAnywhere.Core.Service
             }
             return true;
         }
+
+        public IEnumerable<Review> GetByCustomerId(int CustomerID)
+        {
+            return _context.Set<Review>().Where(i => i.CustomerID == CustomerID).ToList();
+        }
+
+        public IEnumerable<Review> GetByRepairmanId(int RepairmanId)
+        {
+            return _context.Set<Review>().Where(i => i.RepairmanID == RepairmanId).ToList();
+        }
     }
 }

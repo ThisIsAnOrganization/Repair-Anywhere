@@ -14,5 +14,9 @@ namespace RepairAnywhere.Core.Service.Interfaces
         bool Insert(Review review);
         bool Update(Review review);
         bool Delete(int ReviewId);
+
+
+        IEnumerable<Review> GetByCustomerId(int CustomerID);
+        IEnumerable<Review> GetByRepairmanId(int RepairmanId);
     }
 }

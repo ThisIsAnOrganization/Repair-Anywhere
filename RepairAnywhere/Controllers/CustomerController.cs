@@ -166,16 +166,16 @@ namespace RepairAnywhere.Controllers
             c = 0;
             foreach (var item in MSVM.repairmen)
             {
-                foreach (var item1 in reviews)
-                {
-                    if (item.RepairmanID == item1.RepairmanID)
-                    {
-                        MSVM.rating[c] += item1.Rating;
-                        MSVM.count[c]++;
-                    }
-                }
-                if (MSVM.count[c] != 0)
-                    MSVM.rating[c] = MSVM.rating[c] / MSVM.count[c];
+                //foreach (var item1 in reviews)
+                //{
+                //    if (item.RepairmanID == item1.RepairmanID)
+                //    {
+                //        MSVM.rating[c] += item1.Rating;
+                //        MSVM.count[c]++;
+                //    }
+                //}
+                //if (MSVM.count[c] != 0)
+                //    MSVM.rating[c] = MSVM.rating[c] / MSVM.count[c];
 
                 MSVM.completecount[c] = 0;
                 IEnumerable<Request> rs = _RequestService.GetAll();
@@ -321,7 +321,7 @@ namespace RepairAnywhere.Controllers
             return View(VPVM);
         }
 
-        public ActionResult viewserviceprovider()
+        public ActionResult viewserviceprovider(int id)
         {
             if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
@@ -330,7 +330,73 @@ namespace RepairAnywhere.Controllers
 
             VSVM.customer = _CustomerService.GetById(Convert.ToInt32(Session["userId"]));
 
+            VSVM.repairman = _RepairmanService.GetById(id);
+            VSVM.reviews = _ReviewService.GetByRepairmanId(id);
+            VSVM.flag = 0;
+
+            DateTime endTime = DateTime.Now;
+
+            TimeSpan span = endTime.Subtract(VSVM.repairman.MemberSince);
+            VSVM.experience = "";
+            if (span.Days > 0)
+            {
+                if (span.Days > 365)
+                {
+                    VSVM.experience += ((int)(span.Days / 365)) + " Years";
+                }
+                if ((span.Days % 365) > 30)
+                {
+                    VSVM.experience += ((int)((span.Days % 365) / 30)) + " Months";
+                }
+                if (span.Days % 30 > 0)
+                {
+                    VSVM.experience += (span.Days % 30) + " Days";
+                }
+
+
+            }
+            else
+                VSVM.experience = "New";
+
+            foreach (var item in VSVM.reviews)
+            {
+                if (item.CustomerID==VSVM.customer.CustomerID)
+                {
+                    VSVM.flag = 1;
+                    break;
+                }
+            }
+            VSVM.completed = _RequestService.GetCompletedByRepairman(id).Count();
+            int c=0;
+            foreach (var item in VSVM.reviews)
+            {
+                VSVM.customers[c] = _CustomerService.GetById(item.CustomerID);
+                c++;
+            }
+
+
             return View(VSVM);
+        }
+
+        public ActionResult addReview(int rid,string desc)
+        {
+
+            Review r = new Review();
+            r.CustomerID = Convert.ToInt32(Session["userId"]);
+            r.RepairmanID = rid;
+            r.Comment = desc;
+            _ReviewService.Insert(r);
+            
+            return RedirectToAction("viewserviceprovider", "Customer", new { id=rid});
+        }
+
+        public ActionResult deleteReview(int rid, int revid)
+        {
+
+            
+            _ReviewService.Delete(revid);
+
+            return RedirectToAction("viewserviceprovider", "Customer", new { id = rid });
         }
 
         public ActionResult logout()

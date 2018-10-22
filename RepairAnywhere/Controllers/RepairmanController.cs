@@ -217,6 +217,23 @@ namespace RepairAnywhere.Controllers
             return RedirectToAction("dashboard", "Repairman");
         }
 
+        public ActionResult myReviews()
+        {
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 2))
+                return RedirectToAction("login", "Common");
+
+
+            MyReviewViewModel MRVM = new MyReviewViewModel();
+            MRVM.reviews = _ReviewService.GetByRepairmanId(Convert.ToInt32(Session["userId"]));
+            int c = 0;
+            foreach (var item in MRVM.reviews)
+            {
+                MRVM.customers[c] = _CustomerService.GetById(item.CustomerID);
+                c++;
+            }
+            return View(MRVM);
+        }
+
 
     }
 }

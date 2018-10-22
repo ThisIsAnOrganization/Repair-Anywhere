@@ -401,5 +401,24 @@ namespace RepairAnywhere.Controllers
             
             return View(VASVM);
         }
+
+        public ActionResult repairmanReview(int id)
+        {
+            if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"]) != 3))
+                return RedirectToAction("login", "Common");
+
+            RepairmanReviewViewModel RRVM = new RepairmanReviewViewModel();
+            RRVM.admin = _AdminService.GetById(Convert.ToInt32(Session["userId"]));
+            RRVM.reviews = _ReviewService.GetByRepairmanId(id);
+            int c = 0;
+            foreach (var item in RRVM.reviews)
+            {
+                RRVM.customers[c] = _CustomerService.GetById(item.CustomerID);
+                c++;
+            }
+
+
+            return View(RRVM);
+        }
     }
 }
