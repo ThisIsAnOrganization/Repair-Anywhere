@@ -100,6 +100,7 @@
                                         <th>Repairman</th>
                                         <th>Email</th>
                                         <th>Phone Number</th>
+                                        <th>Rating</th>
                                         <th>Address</th>
                                         <th>#</th>
                                     </tr>
@@ -111,6 +112,18 @@
                     <td><a href="serviceprovider.html">@Model.repairmanActive.Name</a></td>
                     <td>@Model.repairmanActive.Email</td>
                     <td>@Model.repairmanActive.PhoneNumber</td>
+                    <td>
+                        @for (int i = 0; i < @Model.repairmanActive.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @Model.repairmanActive.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+                    </td>
+
                     <td >@Model.repairmanActive.Address</td>
                     <td class="center"><a href="@Url.Action("undoRepairman", "Admin", new { id = @Model.request.RequestID,rid=@Model.repairmanActive.RepairmanID })"><button class="btn btn-danger" >Undo</button></a></td>
                 </tr>
@@ -121,6 +134,17 @@
                     <td><a href="serviceprovider.html">@item.Name</a></td>
                     <td>@item.Email</td>
                     <td>@item.PhoneNumber</td>
+                    <td>
+                         @for (int i = 0; i < @item.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @item.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+                    </td>
                     <td >@item.Address</td>
                     <td class="center"><a href="@Url.Action("assignRepairman", "Admin", new { id = @Model.request.RequestID,rid=@item.RepairmanID })"><button class="btn btn-primary" >Assign</button></a></td>
                 </tr>
