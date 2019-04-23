@@ -17,6 +17,7 @@ namespace RepairAnywhere.Core.Entities
         public string Password { get; set; }
         public string Address { get; set; }
         public string Status { get; set; }
+        public double Rating { get; set; }
         public DateTime MemberSince { get; set; }
         public DateTime LastLogin { get; set; }
     }

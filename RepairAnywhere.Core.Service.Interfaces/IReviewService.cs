@@ -18,5 +18,6 @@ namespace RepairAnywhere.Core.Service.Interfaces
 
         IEnumerable<Review> GetByCustomerId(int CustomerID);
         IEnumerable<Review> GetByRepairmanId(int RepairmanId);
+        IEnumerable<Review> GetByBothId(int RepairmanId, int CustomerID);
     }
 }

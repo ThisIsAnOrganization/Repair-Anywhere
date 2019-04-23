@@ -183,6 +183,7 @@ namespace RepairAnywhere.Controllers
                     r.Address = address;
                     r.LastLogin = DateTime.Now;
                     r.Status = "Idle";
+                    r.Rating = 1;
                     _RepairmanService.Insert(r);
 
                     IEnumerable<Repairman> RA = _RepairmanService.GetAll();

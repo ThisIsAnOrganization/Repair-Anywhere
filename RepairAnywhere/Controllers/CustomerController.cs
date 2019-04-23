@@ -155,13 +155,23 @@ namespace RepairAnywhere.Controllers
             MSVM.requests = _RequestService.GetCompletedByCustomer(MSVM.customer.CustomerID);
 
             IEnumerable<Review> reviews = _ReviewService.GetAll();
+            IEnumerable<Review> common;
             int c = 0;
             foreach (var item in MSVM.requests)
             {
                 MSVM.repairmen[c] = _RepairmanService.GetById(item.RepairmanID);
                 MSVM.count[c]= 0;
                 MSVM.rating[c]= 0;
+                common = _ReviewService.GetByBothId(MSVM.repairmen[c].RepairmanID, MSVM.customer.CustomerID);
+
+                if ((common.Count() > 0) && (common.SingleOrDefault().Rating > 0))
+                    MSVM.flagR[c] = 1;
+
+                else
+                    MSVM.flagR[c] = 0;
+
                 c++;
+                
             }
             c = 0;
             foreach (var item in MSVM.repairmen)
@@ -196,7 +206,10 @@ namespace RepairAnywhere.Controllers
                 MSVM.drivers[c] = "Drivers" + Convert.ToString(c + 1);
                 c++;
             }
-
+            //MSVM.requests = MSVM.requests.Reverse().AsEnumerable();
+            //MSVM.repairmen = MSVM.repairmen.Reverse().ToArray();
+            //MSVM.details = MSVM.details.Reverse().ToArray();
+            //MSVM.drivers = MSVM.drivers.Reverse().ToArray();
             return View(MSVM);
         }
 
@@ -397,6 +410,44 @@ namespace RepairAnywhere.Controllers
             _ReviewService.Delete(revid);
 
             return RedirectToAction("viewserviceprovider", "Customer", new { id = rid });
+        }
+
+        public ActionResult changeRate(int star, int r, int c)
+        {
+            IEnumerable<Review> reviews = _ReviewService.GetByBothId(r, c);
+
+            if (reviews.Count() > 0)
+            {
+                foreach (var item in reviews)
+                {
+                    item.Rating = star;
+                    _ReviewService.Update(item);
+                }
+
+            }
+
+            else
+            {
+                Review r1 = new Review();
+
+                r1.CustomerID = c;
+                r1.RepairmanID = r;
+                r1.Rating = star;
+                r1.Comment = "Coming Soon";
+                _ReviewService.Insert(r1);
+            }
+            Repairman rr = _RepairmanService.GetById(r);
+
+            IEnumerable<Review> reviews1 = _ReviewService.GetByRepairmanId(r);
+            double rat;
+            if (reviews1.Count() != 0)
+            {
+                rat = (((reviews1.Count() - 1) * rr.Rating) + star) / reviews1.Count();
+                rr.Rating = rat;
+            }
+            _RepairmanService.Update(rr);
+
+            return RedirectToAction("myServices", "Customer");
         }
 
         public ActionResult logout()

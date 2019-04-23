@@ -38,3 +38,13 @@ C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Re
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.dll
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.pdb
 C:\Users\Ezy\Desktop\Repair-Anywhere-master\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.dll.config
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Core.Entities\obj\Debug\RepairAnywhere.Core.Entities.pdb

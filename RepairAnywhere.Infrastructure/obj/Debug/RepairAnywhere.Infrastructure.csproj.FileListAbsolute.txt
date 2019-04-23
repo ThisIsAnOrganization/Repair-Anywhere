@@ -46,3 +46,15 @@ C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Re
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.dll
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Infrastructure.dll.config
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Infrastructure.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Infrastructure.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\RepairAnywhere.Infrastructure\obj\Debug\RepairAnywhere.Infrastructure.pdb

@@ -70,3 +70,21 @@ C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Te
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Test\obj\Debug\Test.exe
 C:\Users\Ezy\Desktop\New folder\Repair-Anywhere-master\Repair-Anywhere-master\Test\obj\Debug\Test.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\Test.exe.config
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\obj\Debug\Test.exe
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\obj\Debug\Test.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\Test.exe
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\Test.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.dll
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Entities.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.Interfaces.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Core.Service.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\RepairAnywhere.Infrastructure.pdb
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.xml
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Efti\Documents\GitHub\Repair-Anywhere\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
