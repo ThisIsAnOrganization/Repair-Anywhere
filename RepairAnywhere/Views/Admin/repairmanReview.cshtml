@@ -11,6 +11,7 @@
                             
                              <tr>
                                  <th>Customer</th>
+                                 <th>Rating</th>
                                  <th>Comment</th>
                              </tr>
     
@@ -20,8 +21,17 @@
                                 
                                 <tr style="cursor:pointer" onclick="window.location='@Url.Action("viewprofilecustomer", "Admin", new { id = @item.CustomerID })';" >
 								<td width="10%"><img src="~/Styles/Customer/images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>@Model.customers[c].Name</b></td>
-								<td class="text-justify">@item.Comment</td>
-                                    <td></td>
+								<td width="10%">@for (int i = 0; i < @item.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @item.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }</td>
+                                    <td class="text-justify">@item.Comment</td>
+                                    
 							</tr>
                            
                                 c++;

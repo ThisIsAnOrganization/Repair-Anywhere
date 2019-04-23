@@ -1,4 +1,81 @@
 @model RepairAnywhere.Models.CustomerViewModel.ViewServiceProviderViewModel
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400">
+<style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+}
+
+body { background: #000; }
+
+.cont {
+  width: 93%;
+  max-width: 350px;
+  text-align: center;
+  margin: 4% auto;
+  padding: 30px 0;
+  background: #111;
+  color: #EEE;
+  border-radius: 5px;
+  border: thin solid #444;
+  overflow: hidden;
+}
+
+hr {
+  margin: 20px;
+  border: none;
+  border-bottom: thin solid rgba(255,255,255,.1);
+}
+
+div.title { font-size: 2em; }
+
+h1 span {
+  font-weight: 300;
+  color: #Fd4;
+}
+
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+</style>
+ 
+
 <style>
 td {text-align:center}
 </style>
@@ -45,17 +122,43 @@ td {text-align:center}
 					
 				</tr>
 				<tr>
-					<td  colspan="2"><input type="button" class="btn btn-outline-primary" value="Show Phone No." onclick="change()" id="myButton1"/><br/><br/></td>
+					<td  ><input type="button" class="btn btn-outline-primary" value="Show Phone No." onclick="change()" id="myButton1"/><br/><br/></td>
+                    <td>Rating<br />
+                         @for (int i = 0; i < @Model.repairman.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @Model.repairman.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+                    </td>
 				</tr>
             @if (@Model.flag==0)
             {
                 <tr>
 					<td colspan="2">
-                        @using (Html.BeginForm("addReview", "Customer", new { rid=@Model.repairman.RepairmanID}))
-                        {
-						<textarea style="width:50%;height:100px" name="desc" class="rounded"></textarea><br/><br/>
-						<button type="submit" class="btn btn-outline-primary">Give Review</button>
-                        }
+                         <div class="stars">
+                            @using (Html.BeginForm("changeRate", "Customer", new { r = @Model.repairman.RepairmanID, c = @Model.customer.CustomerID, page="viewserviceprovider" }, FormMethod.Post))
+                            {	
+                            <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
+                            <label class="star star-5" for="star-5"></label>
+                            <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
+                            <label class="star star-4" for="star-4"></label>
+                            <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
+                            <label class="star star-3" for="star-3"></label>
+                            <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
+                            <label class="star star-2" for="star-2"></label>
+                            <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
+                            <label class="star star-1" for="star-1"></label>
+                                                                     
+                                <textarea placeholder="Review" name="comment" style="width:100%;height:auto" class="rounded"></textarea>
+                                                                    
+                                                                     
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            }
+                        </div>
 					</td>
 				</tr>
             }
@@ -72,7 +175,18 @@ td {text-align:center}
                                     {
                                         <tr >
 								<td width="10%"><img src="~/Styles/Customer/images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>@Model.customer.Name</b></td>
-								<td class="text-justify">@item.Comment</td>
+								<td class="text-justify">
+
+                                    @for (int i = 0; i < @item.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @item.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+                                    <br />@item.Comment</td>
                                     <td style="text-align:right;"><a href="@Url.Action("deleteReview", "Customer", new { rid = @Model.repairman.RepairmanID,revid=@item.ReviewID })"><i style="font-size:25px" class="fa fa-trash" aria-hidden="true"></i></a></td>
 							</tr>
                                     }

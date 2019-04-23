@@ -165,18 +165,21 @@ label.star:before {
                                                             {
                                                                 <br />
                                                             <div class="stars">
-                                                                 @using (Html.BeginForm("changeRate", "Customer", new { r = @Model.repairmen[count].RepairmanID,c=@Model.customer.CustomerID }, FormMethod.Post))
+                                                                 @using (Html.BeginForm("changeRate", "Customer", new { r = @Model.repairmen[count].RepairmanID, c = @Model.customer.CustomerID, page = "myServices" }, FormMethod.Post))
                                                                  {	
-                                                                  <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
-                                                                  <label class="star star-5" for="star-5"></label>
-                                                                  <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
-                                                                  <label class="star star-4" for="star-4"></label>
-                                                                  <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
-                                                                  <label class="star star-3" for="star-3"></label>
-                                                                  <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
-                                                                  <label class="star star-2" for="star-2"></label>
-                                                                  <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
-                                                                  <label class="star star-1" for="star-1"></label>
+                                                                  <input class="star star-5" id="star-5_@count" type="radio" name="star" value="5"/>
+                                                                  <label class="star star-5" for="star-5_@count"></label>
+                                                                  <input class="star star-4" id="star-4_@count" type="radio" name="star" value="4"/>
+                                                                  <label class="star star-4" for="star-4_@count"></label>
+                                                                  <input class="star star-3" id="star-3_@count" type="radio" name="star" value="3"/>
+                                                                  <label class="star star-3" for="star-3_@count"></label>
+                                                                  <input class="star star-2" id="star-2_@count" type="radio" name="star" value="2"/>
+                                                                  <label class="star star-2" for="star-2_@count"></label>
+                                                                  <input class="star star-1" id="star-1_@count" type="radio" name="star" value="1"/>
+                                                                  <label class="star star-1" for="star-1_@count"></label>
+                                                                     
+                                                                     <textarea placeholder="Review" name="comment" style="width:100%;height:auto" class="rounded"></textarea>
+                                                                    
                                                                      
                                                                      <button type="submit" class="btn btn-primary">Submit</button>
                                                                  }
@@ -212,8 +215,8 @@ label.star:before {
 															<h4> Give Review</h4>
 															<textarea name="review" height="50px" width="150px"></textarea><br/> <br/>
 															<button type="submit" class="btn btn-primary">Submut</button>
-                                                            }
-                                                            <button onclick="window.location='@Url.Action("viewserviceprovider", "Customer", new { id = @Model.repairmen[count].RepairmanID })';" class="btn btn-secondary" >Reviews</button>*@
+                                                            }*@
+                                                            <button onclick="window.location='@Url.Action("viewserviceprovider", "Customer", new { id = @Model.repairmen[count].RepairmanID })';" class="btn btn-secondary" >Reviews</button>
 														</td>
 													</tr>
 												</table>

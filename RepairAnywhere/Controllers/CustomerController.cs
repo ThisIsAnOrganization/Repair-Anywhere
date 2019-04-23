@@ -412,15 +412,19 @@ namespace RepairAnywhere.Controllers
             return RedirectToAction("viewserviceprovider", "Customer", new { id = rid });
         }
 
-        public ActionResult changeRate(int star, int r, int c)
+        public ActionResult changeRate(string star,string comment, int r, int c,string page)
         {
             IEnumerable<Review> reviews = _ReviewService.GetByBothId(r, c);
-
+            if (Equals(star,""))
+            {
+                star = "0";
+            }
             if (reviews.Count() > 0)
             {
                 foreach (var item in reviews)
                 {
-                    item.Rating = star;
+                    item.Rating = Convert.ToDouble(star);
+                    item.Comment = comment;
                     _ReviewService.Update(item);
                 }
 
@@ -432,8 +436,8 @@ namespace RepairAnywhere.Controllers
 
                 r1.CustomerID = c;
                 r1.RepairmanID = r;
-                r1.Rating = star;
-                r1.Comment = "Coming Soon";
+                r1.Rating = Convert.ToDouble(star);
+                r1.Comment = comment;
                 _ReviewService.Insert(r1);
             }
             Repairman rr = _RepairmanService.GetById(r);
@@ -442,12 +446,17 @@ namespace RepairAnywhere.Controllers
             double rat;
             if (reviews1.Count() != 0)
             {
-                rat = (((reviews1.Count() - 1) * rr.Rating) + star) / reviews1.Count();
+                rat = (((reviews1.Count() - 1) * rr.Rating) + Convert.ToDouble(star)) / reviews1.Count();
                 rr.Rating = rat;
             }
             _RepairmanService.Update(rr);
 
-            return RedirectToAction("myServices", "Customer");
+            if (Equals(page, "myServices"))
+                return RedirectToAction(page, "Customer");
+            
+            else
+                return RedirectToAction(page, "Customer", new { id = r });
+
         }
 
         public ActionResult logout()

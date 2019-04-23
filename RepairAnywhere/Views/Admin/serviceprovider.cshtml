@@ -26,6 +26,17 @@
       <div class="row" align="center">
         <label>@item.Name</label>
     </div>
+          <div class="row" align="center">
+              @for (int i = 0; i < @item.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @item.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+          </div>
     <div class="row" align="center">
         <a href="@Url.Action("viewprofileservice", "Admin", new { id = @item.RepairmanID })"><button type="button" class="btn btn-success">View Profile</button></a>
     </div>
