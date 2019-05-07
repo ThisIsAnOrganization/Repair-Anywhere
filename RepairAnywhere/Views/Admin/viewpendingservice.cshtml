@@ -109,7 +109,7 @@
                                     @if (@Model.repairmanActive != null)
                                     {
                                         <tr class="odd gradeX">
-                    <td><a href="serviceprovider.html">@Model.repairmanActive.Name</a></td>
+                    <td><a href="@Url.Action("viewprofileservice", "Admin", new { id = @Model.repairmanActive.RepairmanID })">@Model.repairmanActive.Name</a></td>
                     <td>@Model.repairmanActive.Email</td>
                     <td>@Model.repairmanActive.PhoneNumber</td>
                     <td>
@@ -131,7 +131,7 @@
                                     @foreach (var item in @Model.repairmen)
                 {
                     <tr class="odd gradeX">
-                    <td><a href="serviceprovider.html">@item.Name</a></td>
+                    <td><a href="@Url.Action("viewprofileservice", "Admin", new { id = @item.RepairmanID })">@item.Name</a></td>
                     <td>@item.Email</td>
                     <td>@item.PhoneNumber</td>
                     <td>

@@ -184,6 +184,7 @@ namespace RepairAnywhere.Controllers
                 {
                     CRVM.requests[c] = item;
                     CRVM.customers[c] = _CustomerService.GetById(item.CustomerID);
+                    CRVM.reviews[c] = _ReviewService.GetByBothId(CRVM.repairman.RepairmanID, item.CustomerID).SingleOrDefault();
                     c++;
                 }
             }
@@ -225,6 +226,7 @@ namespace RepairAnywhere.Controllers
 
             MyReviewViewModel MRVM = new MyReviewViewModel();
             MRVM.reviews = _ReviewService.GetByRepairmanId(Convert.ToInt32(Session["userId"]));
+            MRVM.repairman = _RepairmanService.GetById(Convert.ToInt32(Session["userId"]));
             int c = 0;
             foreach (var item in MRVM.reviews)
             {

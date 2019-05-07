@@ -10,5 +10,6 @@ namespace RepairAnywhere.Models.RepairmanViewModel
     {
         public Request[] requests = new Request[1000];
         public Customer[] customers = new Customer[1000];
+        public Review[] reviews = new Review[1000];
     }
 }

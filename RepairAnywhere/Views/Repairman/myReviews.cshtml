@@ -6,6 +6,11 @@
                 <!-- /.col-lg-12 -->
             </div>
 <table class="table table-primary table-striped">
+    <tr>
+        <th style="text-align:center">Customer</th>
+        <th style="text-align:center">Rating</th>
+        <th>Comment</th>
+    </tr>
                             
                              
     
@@ -14,7 +19,18 @@
                             {
                                 
                                 <tr >
-								<td width="10%"><img src="~/Styles/Customer/images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>@Model.customers[c].Name</b></td>
+								<td width="12%" style="text-align:center"><img src="~/Styles/Customer/images/user_pic.jpg" style="width:100%" class="rounded-circle"> <b>@Model.customers[c].Name</b></td>
+                                    <td width="15%" style="vertical-align: middle">
+                                        @for (int i = 0; i < @item.Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @item.Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+                                    </td>
 								<td class="text-justify">@item.Comment</td>
                                     <td></td>
 							</tr>

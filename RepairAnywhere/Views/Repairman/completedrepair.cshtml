@@ -50,6 +50,19 @@
 														</td>
 													</tr>
 													<tr>
+														<td  style="text-align:center" width="40%">
+															@for (int i = 0; i < @Model.reviews[count].Rating; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:orange"></i>
+                                                                    }
+                                                                
+                                                                    @for (double i = @Model.reviews[count].Rating; i < 5; i++)
+                                                                    {
+                                                                        <i class="fa fa-star" style="font-size: 20px;color:black"></i>
+                                                                    }
+														</td>
+													</tr>
+													<tr>
 														
 														<td style="text-align:center">
 															Contact No: @Model.customers[count].PhoneNumber
