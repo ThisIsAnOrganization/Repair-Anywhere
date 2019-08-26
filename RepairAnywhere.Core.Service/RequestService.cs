@@ -124,5 +124,21 @@ namespace RepairAnywhere.Core.Service
         {
             return _context.Set<Request>().Where(i => i.Status == "Completed").ToList();
         }
+        
+        public IEnumerable<Request> GetAllCompletedandDisaproved()
+        {
+            return _context.Set<Request>().Where(i => i.Status == "Completed" || i.Status == "Disaproved").ToList();
+        }
+
+        public IEnumerable<Request> GetCompletedandDisaprovedByRepairman(int RepairmanID)
+        {
+            return _context.Set<Request>().Where(i => i.RepairmanID == RepairmanID && (i.Status == "Completed" || i.Status == "Disaproved")).ToList();
+        }
+
+        public IEnumerable<Request> GetCompletedandDisaprovedByCustomer(int CustomerID)
+        {
+            return _context.Set<Request>().Where(i => i.CustomerID == CustomerID && (i.Status == "Completed" || i.Status == "Disaproved")).ToList();
+        }
+
     }
 }

@@ -97,9 +97,19 @@ label.star:before {
     {
         
 					<div class="card">
-                        <div class="card-header bg-primary text-light ">
+                        @if (item.Status=="Completed")
+                        {
+                            <div class="card-header bg-primary text-light ">
                             Problem
                         </div>
+                        }
+                        @if (item.Status!="Completed")
+                        {
+                            <div class="card-header bg-danger text-light ">
+                            Problem
+                        </div>
+                        }
+                        
                         <!-- /.panel-heading -->
                         <div class="card-body">
                             <!-- Nav tabs -->
@@ -141,8 +151,10 @@ label.star:before {
                                 
                                 
                                @* <div class="tab-pane fade" id="@Model.drivers[count]">*@
-                                <br />    
-                                <h4>Service Provider</h4>
+                                <br /> 
+                                @if (item.Status=="Completed")
+                                {
+                                    <h4>Service Provider</h4>
 									<table>
 										<tr>
 											<td width="30%">
@@ -226,12 +238,24 @@ label.star:before {
 										</tr>
 									</table>
 									
+                                }   
+                                
                              @*   </div>*@
                             </div>
                         </div>
-						<div class="card-footer">
+                        @if (item.Status=="Completed")
+                        {
+                            <div class="card-footer">
 						<h3>Total Charge: @item.Cost</h3>
 						</div>
+                        }
+                        @if (item.Status!="Completed")
+                        {
+                            <div class="card-footer">
+						<a href="@Url.Action("deleteRequest", "Customer", new { id = @item.RequestID,p="myServices"})"><button  class="btn btn-danger text-light" >Delete Request</button></a>
+						</div>
+                        }
+						
                         <!-- /.panel-body -->
                     </div>
 

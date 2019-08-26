@@ -81,7 +81,8 @@
               @if (@Model.request.Status=="Pending")
               {
                   <h4>Repairman Not Yet Assigned</h4><br /><br />
-                  <a href="@Url.Action("deleteRequest", "Customer", new { id = @Model.request.RequestID })"><button  class="btn btn-danger text-light" >Delete Request</button></a>
+                  <a href="@Url.Action("RequestService", "Customer", new { flag=@Model.request.RequestID })"><button  class="btn btn-primary text-light" >Edit Request</button></a>
+                  <a href="@Url.Action("deleteRequest", "Customer", new { id = @Model.request.RequestID,p="dashboard" })"><button  class="btn btn-danger text-light" >Delete Request</button></a>
               }
 
 		  </div>

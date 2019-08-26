@@ -152,24 +152,28 @@ namespace RepairAnywhere.Controllers
             MyServicesViewModel MSVM = new MyServicesViewModel();
 
             MSVM.customer = _CustomerService.GetById(Convert.ToInt32(Session["userId"]));
-            MSVM.requests = _RequestService.GetCompletedByCustomer(MSVM.customer.CustomerID);
+            MSVM.requests = _RequestService.GetCompletedandDisaprovedByCustomer(MSVM.customer.CustomerID);
 
             IEnumerable<Review> reviews = _ReviewService.GetAll();
             IEnumerable<Review> common;
             int c = 0;
             foreach (var item in MSVM.requests)
             {
-                MSVM.repairmen[c] = _RepairmanService.GetById(item.RepairmanID);
-                MSVM.count[c]= 0;
-                MSVM.rating[c]= 0;
-                common = _ReviewService.GetByBothId(MSVM.repairmen[c].RepairmanID, MSVM.customer.CustomerID);
+                if (item.Status=="Completed")
+                {
+                    MSVM.repairmen[c] = _RepairmanService.GetById(item.RepairmanID);
+                    MSVM.count[c] = 0;
+                    MSVM.rating[c] = 0;
+                    common = _ReviewService.GetByBothId(MSVM.repairmen[c].RepairmanID, MSVM.customer.CustomerID);
 
-                if ((common.Count() > 0) && (common.SingleOrDefault().Rating > 0))
-                    MSVM.flagR[c] = 1;
+                    if ((common.Count() > 0) && (common.SingleOrDefault().Rating > 0))
+                        MSVM.flagR[c] = 1;
 
-                else
-                    MSVM.flagR[c] = 0;
+                    else
+                        MSVM.flagR[c] = 0;
 
+                    
+                }
                 c++;
                 
             }
@@ -186,15 +190,17 @@ namespace RepairAnywhere.Controllers
                 //}
                 //if (MSVM.count[c] != 0)
                 //    MSVM.rating[c] = MSVM.rating[c] / MSVM.count[c];
-
-                MSVM.completecount[c] = 0;
-                IEnumerable<Request> rs = _RequestService.GetAll();
                 if (item != null)
                 {
-                    foreach (var item3 in rs)
+                    MSVM.completecount[c] = 0;
+                    IEnumerable<Request> rs = _RequestService.GetAll();
+                    if (item != null)
                     {
-                        if ((item3.Status == "Completed") && (item3.RepairmanID == item.RepairmanID))
-                            MSVM.completecount[c]++;
+                        foreach (var item3 in rs)
+                        {
+                            if (((item3.Status == "Completed" && (item3.RepairmanID == item.RepairmanID)) || (item3.Status == "Disaproved")))
+                                MSVM.completecount[c]++;
+                        }
                     }
                 }
                 c++;
@@ -203,6 +209,7 @@ namespace RepairAnywhere.Controllers
             foreach (var item in MSVM.requests)
             {
                 MSVM.details[c] = "Details" + Convert.ToString(c + 1);
+                if (item.Status == "Completed")
                 MSVM.drivers[c] = "Drivers" + Convert.ToString(c + 1);
                 c++;
             }
@@ -213,7 +220,7 @@ namespace RepairAnywhere.Controllers
             return View(MSVM);
         }
 
-        public ActionResult RequestService()
+        public ActionResult RequestService(int flag)
         {
             if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
@@ -223,12 +230,18 @@ namespace RepairAnywhere.Controllers
             RSVM.customer = _CustomerService.GetById(Convert.ToInt32(Session["userId"]));
             RSVM.flag = 0;
             RSVM.address = RSVM.customer.Address;
+            RSVM.flag1 = flag;
+            if (flag!=0)
+            {
+                RSVM.request = _RequestService.GetById(flag);
+            }
+            
             return View(RSVM);
         }
 
 
         [HttpPost]
-        public ActionResult RequestService(string category, string prob, string address)
+        public ActionResult RequestService(string category, string prob, string address,int flag1)
         {
             RequestServiceViewModel RSVM = new RequestServiceViewModel();
 
@@ -263,6 +276,11 @@ namespace RepairAnywhere.Controllers
                 r.Address = address;
 
                 _RequestService.Insert(r);
+
+                if (flag1>0)
+                {
+                    _RequestService.Delete(flag1);
+                }
 
 
 
@@ -313,14 +331,18 @@ namespace RepairAnywhere.Controllers
             return View(TDVM);
         }
 
-        public ActionResult deleteRequest(int id)
+        public ActionResult deleteRequest(int id,string p)
         {
             if ((Session["userId"] == null) || (Convert.ToInt32(Session["type"])!=1))
                 return RedirectToAction("login", "Common");
 
             _RequestService.Delete(id);
 
-            return RedirectToAction("dashboard", "Customer");
+            if(p=="tripdetails")
+                return RedirectToAction(p, "Customer", new { id=id});
+
+            else
+                return RedirectToAction(p, "Customer");
         }
 
         public ActionResult viewProfile()

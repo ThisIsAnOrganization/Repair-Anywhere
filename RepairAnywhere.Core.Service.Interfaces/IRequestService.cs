@@ -22,6 +22,7 @@ namespace RepairAnywhere.Core.Service.Interfaces
         IEnumerable<Request> GetPendingByRepairman(int RepairmanID);
         Request GetActiveByRepairman(int RepairmanID);
         IEnumerable<Request> GetCompletedByRepairman(int RepairmanID);
+        IEnumerable<Request> GetCompletedandDisaprovedByRepairman(int RepairmanID);
 
         IEnumerable<Request> GetAllByRepairman(int RepairmanID);
         IEnumerable<Request> GetAllCustomer(int CustomerID);
@@ -29,6 +30,9 @@ namespace RepairAnywhere.Core.Service.Interfaces
         IEnumerable<Request> GetAllPending();
         IEnumerable<Request> GetAllActive();
         IEnumerable<Request> GetAllCompleted();
+
+        IEnumerable<Request> GetAllCompletedandDisaproved();
+        IEnumerable<Request> GetCompletedandDisaprovedByCustomer(int CustomerID);
 
         
     }

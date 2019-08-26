@@ -327,7 +327,9 @@ namespace RepairAnywhere.Controllers
 
         public ActionResult deleteRequest(int id)
         {
-            _RequestService.Delete(id);
+            Request r = _RequestService.GetById(id);
+            r.Status = "Disaproved";
+            _RequestService.Update(r);
 
             return RedirectToAction("dashboard");
         }
